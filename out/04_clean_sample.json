@@ -1,0 +1,89 @@
+{
+  "counts": {
+    "total": 95809,
+    "D1": 3355,
+    "D2": 0,
+    "D3": 0,
+    "kept": 92454,
+    "F1": 0,
+    "F3": 13098,
+    "companies_before_F2": 1504,
+    "companies_after_F2": 1502
+  },
+  "company_response": {
+    "Untimely response": 191,
+    "Closed with non-monetary relief": 31606,
+    "In progress": 3164,
+    "Closed with monetary relief": 1118,
+    "Closed with explanation": 59533,
+    "Closed without relief": 91,
+    "Closed": 76,
+    "Closed with relief": 30
+  },
+  "examples": {
+    "D1": [
+      {
+        "complaint_id": "26865200",
+        "date_received": "2026-09-09",
+        "product": "Student loan",
+        "sub_product": "Private student loan",
+        "issue": "Getting a loan",
+        "company": "MOHELA",
+        "company_response": "Untimely response"
+      },
+      {
+        "complaint_id": "29889400",
+        "date_received": "2026-10-13",
+        "product": "Credit reporting or other personal consumer reports",
+        "sub_product": "Credit reporting",
+        "issue": "Incorrect information on your report",
+        "company": "Experian Information Solutions Inc.",
+        "company_response": "In progress"
+      },
+      {
+        "complaint_id": "29893000",
+        "date_received": "2026-10-13",
+        "product": "Credit reporting or other personal consumer reports",
+        "sub_product": "Credit reporting",
+        "issue": "Improper use of your report",
+        "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+        "company_response": "In progress"
+      }
+    ],
+    "D2": [],
+    "D3": [],
+    "F1": [],
+    "F3": [
+      {
+        "complaint_id": "6706400",
+        "date_received": "2023-03-17",
+        "product": "Credit reporting, credit repair services, or other personal consumer reports",
+        "sub_product": "Credit reporting",
+        "issue": "Incorrect information on your report",
+        "company": "Experian Information Solutions Inc.",
+        "company_response": "Closed with explanation",
+        "product_after_F3": "Credit reporting or other personal consumer reports"
+      },
+      {
+        "complaint_id": "3673200",
+        "date_received": "2020-05-29",
+        "product": "Credit reporting, credit repair services, or other personal consumer reports",
+        "sub_product": "Credit reporting",
+        "issue": "Problem with a credit reporting company's investigation into an existing problem",
+        "company": "ALLY FINANCIAL INC.",
+        "company_response": "Closed with explanation",
+        "product_after_F3": "Credit reporting or other personal consumer reports"
+      },
+      {
+        "complaint_id": "3925400",
+        "date_received": "2020-10-29",
+        "product": "Credit card or prepaid card",
+        "sub_product": "General-purpose credit card or charge card",
+        "issue": "Other features, terms, or problems",
+        "company": "JPMORGAN CHASE & CO.",
+        "company_response": "Closed with non-monetary relief",
+        "product_after_F3": "Credit card"
+      }
+    ]
+  }
+}

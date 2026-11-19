@@ -1,0 +1,36 @@
+ Container bigdata-final-job-run-da99ef54a194 Creating 
+ Container bigdata-final-job-run-da99ef54a194 Created 
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/11/19 21:48:51 INFO SparkContext: Running Spark version 4.2.0
+26/11/19 21:48:51 INFO SparkContext: OS info Linux, 6.12.76-linuxkit, aarch64
+26/11/19 21:48:51 INFO SparkContext: Java version 21.0.11+10-LTS
+26/11/19 21:48:51 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting Spark log level to "WARN".
+26/11/19 21:48:55 WARN CSVHeaderChecker: CSV header does not conform to the schema.
+ Header: Date received, Product, Sub-product, Issue, Company, Company response to consumer
+ Schema: date_received, product, sub_product, issue, company, company_response
+Expected: date_received but found: Date received
+CSV file: file:///data/complaints.csv
+
+full: 20,232 пар, у рейтингу 498, дія 16.5 с
+ 1. +51.25 п.п.  n=   18,250  EXPERIAN INFORMATION SOLUTIONS INC. | Credit card
+ 2. +45.08 п.п.  n=    1,627  CASCADE CISS HOLDINGS, LLC | Credit reporting or other personal consumer reports
+ 3. +44.23 п.п.  n=    3,357  MOHELA | Credit reporting or other personal consumer reports
+ 4. +42.34 п.п.  n=    2,464  ADVANCED RESOLUTION SERVICES INC. | Credit reporting or other personal consumer reports
+ 5. +41.71 п.п.  n=    4,435  MAXIMUS FEDERAL SERVICES, INC. | Credit reporting or other personal consumer reports
+ 6. +41.63 п.п.  n=    7,716  AFFIRM HOLDINGS, INC | Credit reporting or other personal consumer reports
+ 7. +41.49 п.п.  n=    2,856  EDFINANCIAL SERVICES | Credit reporting or other personal consumer reports
+ 8. +41.46 п.п.  n=    3,278  LCI ACQUISITION INC. | Credit reporting or other personal consumer reports
+ 9. +41.40 п.п.  n=    1,445  OPEN DEALER EXCHANGE, LLC | Credit reporting or other personal consumer reports
+10. +41.37 п.п.  n=    8,080  SELF FINANCIAL INC. | Credit reporting or other personal consumer reports
+11. +40.99 п.п.  n=    1,085  AVANT HOLDING COMPANY, INC. | Credit reporting or other personal consumer reports
+12. +40.36 п.п.  n=    1,903  FACTORTRUST, INC. | Credit reporting or other personal consumer reports
+13. +40.29 п.п.  n=    1,626  UPSTART HOLDINGS, INC. | Credit reporting or other personal consumer reports
+14. +40.23 п.п.  n=    3,056  BRIDGECREST ACCEPTANCE CORPORATION | Credit reporting or other personal consumer reports
+15. +39.81 п.п.  n=    1,270  SUNRISE CREDIT SERVICES, INC | Credit reporting or other personal consumer reports
+16. +39.71 п.п.  n=    1,175  CONTINENTAL FINANCE COMPANY, LLC | Credit reporting or other personal consumer reports
+17. +39.61 п.п.  n=    1,851  UPGRADE, INC. | Credit reporting or other personal consumer reports
+18. +39.39 п.п.  n=    1,043  ALDOUS & ASSOCIATES, PLLC | Credit reporting or other personal consumer reports
+19. +39.17 п.п.  n=    2,009  FC HOLDCO LLC | Credit reporting or other personal consumer reports
+20. +39.07 п.п.  n=    1,883  NCB MANAGEMENT SERVICES INC. | Credit reporting or other personal consumer reports

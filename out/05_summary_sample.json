@@ -1,0 +1,34 @@
+{
+  "tag": "sample",
+  "input": "data/sample.csv",
+  "format": "csv",
+  "action_seconds": 2.8,
+  "pairs": 2548,
+  "pairs_ranked": 3,
+  "complaints_used": 89532,
+  "dropped_cells": 2721,
+  "dropped_complaints": 2922,
+  "top": [
+    {
+      "company": "EXPERIAN INFORMATION SOLUTIONS INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 21210,
+      "excess_total": 8000.310698044776,
+      "deviation": 0.37719522385878246
+    },
+    {
+      "company": "EQUIFAX, INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 24939,
+      "excess_total": -2984.701197280647,
+      "deviation": -0.11968006725532888
+    },
+    {
+      "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 25014,
+      "excess_total": -6674.650139304211,
+      "deviation": -0.2668365770889986
+    }
+  ]
+}

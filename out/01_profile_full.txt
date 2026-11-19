@@ -1,0 +1,34 @@
+file=/data/complaints.csv size=5,824,441,185 B rows=19,203,798 seconds=98
+duplicate complaint_id=0  whitespace-padded rows=0  date_sent<date_received=7,050
+company_response: Closed with explanation=11,862,075, Closed with non-monetary relief=6,389,281, In progress=649,654, Closed with monetary relief=225,665, Untimely response=36,320, Closed without relief=17,867, Closed=17,611, Closed with relief=5,304, <empty>=21
+companies=8,214 (case-only duplicates: 7 groups) [['OneMain Finance Corporation', 'ONEMAIN FINANCE CORPORATION'], ['FIRST TECHNOLOGY FEDERAL CREDIT UNION', 'First Technology Federal Credit Union'], ['GLOBAL CREDIT UNION', 'Global Credit Union'], ['Synergy One Lending, Inc.', 'SYNERGY ONE LENDING, INC.'], ['ATM OPS Inc', 'ATM OPS INC'], ['Riverwalk Financial Corporation', 'Riverwalk Financial CORPORATION'], ['Summit Mortgage Corporation', 'SUMMIT MORTGAGE CORPORATION']]
+avg string length: company=27.7, product=45.3, issue=38.7
+products (rows, first month .. last month):
+      466,936  2011-12..2026-11  Mortgage
+      361,703  2011-12..2026-11  Credit card
+       86,198  2012-03..2017-04  Bank account or service
+       31,559  2012-03..2017-04  Consumer Loan
+      136,504  2012-03..2026-11  Student loan
+      140,426  2012-10..2017-04  Credit reporting
+        5,354  2013-04..2017-04  Money transfers
+    1,237,881  2013-07..2026-11  Debt collection
+        5,528  2013-11..2017-04  Payday loan
+        1,056  2014-07..2017-04  Other financial service
+       24,318  2014-07..2026-11  Prepaid card
+           18  2014-08..2017-04  Virtual currency
+    2,163,769  2017-04..2023-08  Credit reporting, credit repair services, or other personal consumer reports
+      206,356  2017-04..2023-08  Credit card or prepaid card
+       30,614  2017-04..2023-08  Payday loan, title loan, or personal loan
+      412,575  2017-04..2026-11  Checking or savings account
+      107,732  2017-04..2026-11  Vehicle loan or lease
+      198,471  2017-04..2026-11  Money transfer, virtual currency, or money service
+       10,965  2023-08..2026-11  Debt or credit management
+   13,533,899  2023-08..2026-11  Credit reporting or other personal consumer reports
+       41,936  2023-08..2026-11  Payday loan, title loan, personal loan, or advance loan
+sub_product inside 'Credit card or prepaid card': General-purpose credit card or charge card=158,877, Store credit card=27,909, Government benefit card=9,067, General-purpose prepaid card=8,530, Gift card=1,021, Payroll card=917, Student prepaid card=32, <empty>=3
+key distributions on raw data (weight = complaints):
+  stage1 (company, product, issue, month): keys=763,187 max=164,847 median=1 top10_share=6.7%  top1=('Experian Information Solutions Inc.', 'Credit reporting or other personal consumer reports', 'Incorrect information on your report', '2026-10')
+  stage2 (product, issue, month):          keys=18,707 max=439,355 median=35 top10_share=17.9%  top1=('Credit reporting or other personal consumer reports', 'Incorrect information on your report', '2026-10')
+  stage4 (company, product):               keys=26,580 max=4,571,965 median=3 top10_share=78.4%  top1=('TRANSUNION INTERMEDIATE HOLDINGS, INC.', 'Credit reporting or other personal consumer reports')
+splits of 128 MB: 44; rows per split min=160,388 max=660,737
+stage1 records after map-side combine (sum of distinct keys per split) = 905,582  vs distinct keys overall = 763,187

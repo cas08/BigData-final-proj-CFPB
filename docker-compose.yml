@@ -1,0 +1,41 @@
+# Spark 4.2.0 у Docker, локальний режим (local[4], driver 2 ГБ) + History Server.
+# Каталог data/ монтується в /data: там вибірка (data/sample.csv) і, для повних запусків,
+# complaints.csv і complaints_parquet (до здачі не входять). Інший каталог задає змінна DATA_DIR.
+name: bigdata-final
+
+x-spark: &spark
+  image: apache/spark:4.2.0-python3 # digest: sha256:fc64959c04bd87b0ac686be9aaa9008b69cdb1afc695400528279c8b01f43d89
+  working_dir: /work
+  environment:
+    PATH: /opt/spark/bin:/opt/spark/sbin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    PYTHONDONTWRITEBYTECODE: "1"
+  volumes:
+    - ./:/work
+    - ${DATA_DIR:-./data}:/data
+    - ./conf/spark-defaults.conf:/opt/spark/conf/spark-defaults.conf:ro
+    - ./spark-events:/tmp/spark-events
+
+services:
+  job:
+    <<: *spark
+    ports:
+      - "4040:4040"
+    # Без аргументів: увесь конвеєр на вибірці.
+    command:
+      [
+        "spark-submit",
+        "scripts/05_job.py",
+        "--input",
+        "data/sample.csv",
+        "--tag",
+        "sample",
+      ]
+
+  history:
+    <<: *spark
+    ports:
+      - "18080:18080"
+    environment:
+      PATH: /opt/spark/bin:/opt/spark/sbin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      SPARK_NO_DAEMONIZE: "true"
+    command: ["/opt/spark/sbin/start-history-server.sh"]

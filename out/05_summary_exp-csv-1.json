@@ -1,0 +1,153 @@
+{
+  "tag": "exp-csv-1",
+  "input": "/data/complaints.csv",
+  "format": "csv",
+  "action_seconds": 16.2,
+  "pairs": 20232,
+  "pairs_ranked": 498,
+  "complaints_used": 18516246,
+  "dropped_cells": 1407,
+  "dropped_complaints": 1551,
+  "top": [
+    {
+      "company": "EXPERIAN INFORMATION SOLUTIONS INC.",
+      "product": "Credit card",
+      "n_total": 18250,
+      "excess_total": 9353.608514562975,
+      "deviation": 0.5125264939486561
+    },
+    {
+      "company": "CASCADE CISS HOLDINGS, LLC",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1627,
+      "excess_total": 733.4496942479868,
+      "deviation": 0.45079882867116583
+    },
+    {
+      "company": "MOHELA",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 3357,
+      "excess_total": 1484.6855285762804,
+      "deviation": 0.44226557300455177
+    },
+    {
+      "company": "ADVANCED RESOLUTION SERVICES INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 2464,
+      "excess_total": 1043.305514291088,
+      "deviation": 0.4234194457350195
+    },
+    {
+      "company": "MAXIMUS FEDERAL SERVICES, INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 4435,
+      "excess_total": 1849.6262464408628,
+      "deviation": 0.417052141249349
+    },
+    {
+      "company": "AFFIRM HOLDINGS, INC",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 7716,
+      "excess_total": 3212.2955636777247,
+      "deviation": 0.41631616947611777
+    },
+    {
+      "company": "EDFINANCIAL SERVICES",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 2856,
+      "excess_total": 1184.8894066338885,
+      "deviation": 0.41487724321914865
+    },
+    {
+      "company": "LCI ACQUISITION INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 3278,
+      "excess_total": 1359.049021318578,
+      "deviation": 0.4145970168757102
+    },
+    {
+      "company": "OPEN DEALER EXCHANGE, LLC",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1445,
+      "excess_total": 598.2210135770194,
+      "deviation": 0.4139937810221588
+    },
+    {
+      "company": "SELF FINANCIAL INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 8080,
+      "excess_total": 3342.3431139519043,
+      "deviation": 0.4136563259841466
+    },
+    {
+      "company": "AVANT HOLDING COMPANY, INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1085,
+      "excess_total": 444.7289435602641,
+      "deviation": 0.40988842724448304
+    },
+    {
+      "company": "FACTORTRUST, INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1903,
+      "excess_total": 767.9897761414181,
+      "deviation": 0.4035679328120957
+    },
+    {
+      "company": "UPSTART HOLDINGS, INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1626,
+      "excess_total": 655.1252650354484,
+      "deviation": 0.40290606705747134
+    },
+    {
+      "company": "BRIDGECREST ACCEPTANCE CORPORATION",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 3056,
+      "excess_total": 1229.2797312956532,
+      "deviation": 0.4022512209737085
+    },
+    {
+      "company": "SUNRISE CREDIT SERVICES, INC",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1270,
+      "excess_total": 505.6204226136336,
+      "deviation": 0.3981263170186091
+    },
+    {
+      "company": "CONTINENTAL FINANCE COMPANY, LLC",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1175,
+      "excess_total": 466.54954219254535,
+      "deviation": 0.39706344016386835
+    },
+    {
+      "company": "UPGRADE, INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1851,
+      "excess_total": 733.2233602187345,
+      "deviation": 0.396122831020386
+    },
+    {
+      "company": "ALDOUS & ASSOCIATES, PLLC",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1043,
+      "excess_total": 410.8567464456061,
+      "deviation": 0.3939182612134287
+    },
+    {
+      "company": "FC HOLDCO LLC",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 2009,
+      "excess_total": 786.8348880367319,
+      "deviation": 0.3916549965339631
+    },
+    {
+      "company": "NCB MANAGEMENT SERVICES INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1883,
+      "excess_total": 735.7442029872341,
+      "deviation": 0.390729794470119
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "tag": "full",
+  "seconds": 51.5,
+  "dropped": {
+    "D1": 685995,
+    "D2": 6
+  },
+  "kept": 18517797,
+  "stage1_keys": 745726,
+  "stage2_keys": 18622,
+  "stage4_keys": 20232,
+  "dropped_cells": 1407,
+  "pairs_ranked": 498,
+  "comparison_with_spark": "Spark і Python збігаються: 498 пар, відхилення однакові до 0,01 п.п.",
+  "top": [
+    {
+      "company": "EXPERIAN INFORMATION SOLUTIONS INC.",
+      "product": "Credit card",
+      "n_total": 18250,
+      "deviation_pp": 51.25
+    },
+    {
+      "company": "CASCADE CISS HOLDINGS, LLC",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1627,
+      "deviation_pp": 45.08
+    },
+    {
+      "company": "MOHELA",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 3357,
+      "deviation_pp": 44.23
+    },
+    {
+      "company": "ADVANCED RESOLUTION SERVICES INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 2464,
+      "deviation_pp": 42.34
+    },
+    {
+      "company": "MAXIMUS FEDERAL SERVICES, INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 4435,
+      "deviation_pp": 41.71
+    },
+    {
+      "company": "AFFIRM HOLDINGS, INC",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 7716,
+      "deviation_pp": 41.63
+    },
+    {
+      "company": "EDFINANCIAL SERVICES",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 2856,
+      "deviation_pp": 41.49
+    },
+    {
+      "company": "LCI ACQUISITION INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 3278,
+      "deviation_pp": 41.46
+    },
+    {
+      "company": "OPEN DEALER EXCHANGE, LLC",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1445,
+      "deviation_pp": 41.4
+    },
+    {
+      "company": "SELF FINANCIAL INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 8080,
+      "deviation_pp": 41.37
+    },
+    {
+      "company": "AVANT HOLDING COMPANY, INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1085,
+      "deviation_pp": 40.99
+    },
+    {
+      "company": "FACTORTRUST, INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1903,
+      "deviation_pp": 40.36
+    },
+    {
+      "company": "UPSTART HOLDINGS, INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1626,
+      "deviation_pp": 40.29
+    },
+    {
+      "company": "BRIDGECREST ACCEPTANCE CORPORATION",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 3056,
+      "deviation_pp": 40.23
+    },
+    {
+      "company": "SUNRISE CREDIT SERVICES, INC",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1270,
+      "deviation_pp": 39.81
+    },
+    {
+      "company": "CONTINENTAL FINANCE COMPANY, LLC",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1175,
+      "deviation_pp": 39.71
+    },
+    {
+      "company": "UPGRADE, INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1851,
+      "deviation_pp": 39.61
+    },
+    {
+      "company": "ALDOUS & ASSOCIATES, PLLC",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1043,
+      "deviation_pp": 39.39
+    },
+    {
+      "company": "FC HOLDCO LLC",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 2009,
+      "deviation_pp": 39.17
+    },
+    {
+      "company": "NCB MANAGEMENT SERVICES INC.",
+      "product": "Credit reporting or other personal consumer reports",
+      "n_total": 1883,
+      "deviation_pp": 39.07
+    }
+  ]
+}

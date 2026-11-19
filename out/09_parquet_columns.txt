@@ -1,0 +1,16 @@
+complaint_id: 86.0 МіБ
+zip_code: 35.1 МіБ
+company: 17.9 МіБ
+sub_issue: 15.3 МіБ
+state: 14.0 МіБ
+issue: 12.6 МіБ
+sub_product: 6.7 МіБ
+product: 5.1 МіБ
+company_response: 4.7 МіБ
+date_sent_to_company: 4.2 МіБ
+company_public_response: 3.5 МіБ
+date_received: 2.2 МіБ
+tags: 1.6 МіБ
+submitted_via: 1.1 МіБ
+timely_response: 0.4 МіБ
+разом 210.4 МіБ; 6 колонок конвеєра: 49.2 МіБ

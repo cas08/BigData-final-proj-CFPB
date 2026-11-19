@@ -1,0 +1,5 @@
+# Повні дані (5,8 ГБ) не входять у репозиторій, див. data/SOURCE.md
+data/complaints.csv
+data/complaints_parquet/
+__pycache__/
+.DS_Store

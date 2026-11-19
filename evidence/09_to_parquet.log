@@ -1,0 +1,15 @@
+ Container bigdata-final-job-run-46473a7435fe Creating 
+ Container bigdata-final-job-run-46473a7435fe Created 
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/11/19 22:05:05 INFO SparkContext: Running Spark version 4.2.0
+26/11/19 22:05:05 INFO SparkContext: OS info Linux, 6.12.76-linuxkit, aarch64
+26/11/19 22:05:05 INFO SparkContext: Java version 21.0.11+10-LTS
+26/11/19 22:05:05 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting Spark log level to "WARN".
+26/11/19 22:05:08 WARN CSVHeaderChecker: CSV header does not conform to the schema.
+ Header: Date received, Product, Sub-product, Issue, Sub-issue, Company public response, Company, State, ZIP code, Tags, Submitted via, Date sent to company, Company response to consumer, Timely response?, Complaint ID
+ Schema: date_received, product, sub_product, issue, sub_issue, company_public_response, company, state, zip_code, tags, submitted_via, date_sent_to_company, company_response, timely_response, complaint_id
+Expected: date_received but found: Date received
+CSV file: file:///data/complaints.csv
+CSV 5,824,441,185 B -> Parquet 221,637,210 B (44 файлів), у 26.3 рази менше, конвертація 19 с

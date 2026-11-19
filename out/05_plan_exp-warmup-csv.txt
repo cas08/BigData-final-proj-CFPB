@@ -1,0 +1,500 @@
+=== EXPLAIN до запуску ===
+== Physical Plan ==
+AdaptiveSparkPlan (25)
++- Project (24)
+   +- HashAggregate (23)
+      +- Exchange (22)
+         +- HashAggregate (21)
+            +- Project (20)
+               +- SortMergeJoin Inner (19)
+                  :- Sort (8)
+                  :  +- Exchange (7)
+                  :     +- HashAggregate (6)
+                  :        +- Exchange (5)
+                  :           +- HashAggregate (4)
+                  :              +- Project (3)
+                  :                 +- Filter (2)
+                  :                    +- Scan csv  (1)
+                  +- Sort (18)
+                     +- HashAggregate (17)
+                        +- Exchange (16)
+                           +- HashAggregate (15)
+                              +- HashAggregate (14)
+                                 +- Exchange (13)
+                                    +- HashAggregate (12)
+                                       +- Project (11)
+                                          +- Filter (10)
+                                             +- Scan csv  (9)
+
+
+(1) Scan csv 
+Output [6]: [date_received#0, product#1, sub_product#2, issue#3, company#6, company_response#12]
+Batched: false
+Location: InMemoryFileIndex [file:/data/complaints.csv]
+PushedFilters: [In(company_response, [Closed,Closed with explanation,Closed with monetary relief,Closed with non-monetary relief,Closed with relief,Closed without relief])]
+ReadSchema: struct<date_received:string,product:string,sub_product:string,issue:string,company:string,company_response:string>
+
+(2) Filter
+Input [6]: [date_received#0, product#1, sub_product#2, issue#3, company#6, company_response#12]
+Condition : (((((((((company_response#12 IN (Closed with monetary relief,Closed with non-monetary relief,Closed with relief,Closed with explanation,Closed,Closed without relief) AND isnotnull(trim(company#6, None))) AND NOT (trim(company#6, None) = )) AND isnotnull(trim(product#1, None))) AND NOT (trim(product#1, None) = )) AND isnotnull(trim(issue#3, None))) AND NOT (trim(issue#3, None) = )) AND coalesce(RLIKE(date_received#0, ^[0-9]{4}-(0[1-9]|1[0-2])-[0-9]{2}$), false)) AND isnotnull(CASE WHEN (trim(product#1, None) = Credit card or prepaid card) THEN CASE WHEN sub_product#2 IN (General-purpose credit card or charge card,Store credit card) THEN Credit card ELSE Prepaid card END ELSE coalesce(map(keys: [Credit reporting,Credit reporting, credit repair services, or other personal consumer reports,Payday loan,Payday loan, title loan, or personal loan,Bank account or service,Money transfers,Virtual currency], values: [Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,Payday loan, title loan, personal loan, or advance loan,Payday loan, title loan, personal loan, or advance loan,Checking or savings account,Money transfer, virtual currency, or money service,Money transfer, virtual currency, or money service])[trim(product#1, None)], trim(product#1, None)) END)) AND isnotnull(substring(date_received#0, 1, 7)))
+
+(3) Project
+Output [5]: [upper(trim(company#6, None)) AS company#16, CASE WHEN (trim(product#1, None) = Credit card or prepaid card) THEN CASE WHEN sub_product#2 IN (General-purpose credit card or charge card,Store credit card) THEN Credit card ELSE Prepaid card END ELSE coalesce(map(keys: [Credit reporting,Credit reporting, credit repair services, or other personal consumer reports,Payday loan,Payday loan, title loan, or personal loan,Bank account or service,Money transfers,Virtual currency], values: [Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,Payday loan, title loan, personal loan, or advance loan,Payday loan, title loan, personal loan, or advance loan,Checking or savings account,Money transfer, virtual currency, or money service,Money transfer, virtual currency, or money service])[trim(product#1, None)], trim(product#1, None)) END AS product#17, trim(issue#3, None) AS issue#18, substring(date_received#0, 1, 7) AS month#19, cast(company_response#12 IN (Closed with monetary relief,Closed with non-monetary relief,Closed with relief) as int) AS relief#20]
+Input [6]: [date_received#0, product#1, sub_product#2, issue#3, company#6, company_response#12]
+
+(4) HashAggregate
+Input [5]: [company#16, product#17, issue#18, month#19, relief#20]
+Keys [4]: [company#16, product#17, issue#18, month#19]
+Functions [2]: [partial_count(1), partial_sum(relief#20)]
+Aggregate Attributes [2]: [count#87L, sum#88L]
+Results [6]: [company#16, product#17, issue#18, month#19, count#89L, sum#90L]
+
+(5) Exchange
+Input [6]: [company#16, product#17, issue#18, month#19, count#89L, sum#90L]
+Arguments: hashpartitioning(company#16, product#17, issue#18, month#19, 200), ENSURE_REQUIREMENTS, [plan_id=56]
+
+(6) HashAggregate
+Input [6]: [company#16, product#17, issue#18, month#19, count#89L, sum#90L]
+Keys [4]: [company#16, product#17, issue#18, month#19]
+Functions [2]: [count(1), sum(relief#20)]
+Aggregate Attributes [2]: [count(1)#28L, sum(relief#20)#29L]
+Results [6]: [company#16, product#17, issue#18, month#19, count(1)#28L AS n#21L, sum(relief#20)#29L AS r#22L]
+
+(7) Exchange
+Input [6]: [company#16, product#17, issue#18, month#19, n#21L, r#22L]
+Arguments: hashpartitioning(product#17, issue#18, month#19, 200), ENSURE_REQUIREMENTS, [plan_id=66]
+
+(8) Sort
+Input [6]: [company#16, product#17, issue#18, month#19, n#21L, r#22L]
+Arguments: [product#17 ASC NULLS FIRST, issue#18 ASC NULLS FIRST, month#19 ASC NULLS FIRST], false, 0
+
+(9) Scan csv 
+Output [6]: [date_received#40, product#41, sub_product#42, issue#43, company#46, company_response#52]
+Batched: false
+Location: InMemoryFileIndex [file:/data/complaints.csv]
+PushedFilters: [In(company_response, [Closed,Closed with explanation,Closed with monetary relief,Closed with non-monetary relief,Closed with relief,Closed without relief])]
+ReadSchema: struct<date_received:string,product:string,sub_product:string,issue:string,company:string,company_response:string>
+
+(10) Filter
+Input [6]: [date_received#40, product#41, sub_product#42, issue#43, company#46, company_response#52]
+Condition : (((((((((company_response#52 IN (Closed with monetary relief,Closed with non-monetary relief,Closed with relief,Closed with explanation,Closed,Closed without relief) AND isnotnull(trim(company#46, None))) AND NOT (trim(company#46, None) = )) AND isnotnull(trim(product#41, None))) AND NOT (trim(product#41, None) = )) AND isnotnull(trim(issue#43, None))) AND NOT (trim(issue#43, None) = )) AND coalesce(RLIKE(date_received#40, ^[0-9]{4}-(0[1-9]|1[0-2])-[0-9]{2}$), false)) AND isnotnull(CASE WHEN (trim(product#41, None) = Credit card or prepaid card) THEN CASE WHEN sub_product#42 IN (General-purpose credit card or charge card,Store credit card) THEN Credit card ELSE Prepaid card END ELSE coalesce(map(keys: [Credit reporting,Credit reporting, credit repair services, or other personal consumer reports,Payday loan,Payday loan, title loan, or personal loan,Bank account or service,Money transfers,Virtual currency], values: [Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,Payday loan, title loan, personal loan, or advance loan,Payday loan, title loan, personal loan, or advance loan,Checking or savings account,Money transfer, virtual currency, or money service,Money transfer, virtual currency, or money service])[trim(product#41, None)], trim(product#41, None)) END)) AND isnotnull(substring(date_received#40, 1, 7)))
+
+(11) Project
+Output [5]: [upper(trim(company#46, None)) AS company#55, CASE WHEN (trim(product#41, None) = Credit card or prepaid card) THEN CASE WHEN sub_product#42 IN (General-purpose credit card or charge card,Store credit card) THEN Credit card ELSE Prepaid card END ELSE coalesce(map(keys: [Credit reporting,Credit reporting, credit repair services, or other personal consumer reports,Payday loan,Payday loan, title loan, or personal loan,Bank account or service,Money transfers,Virtual currency], values: [Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,Payday loan, title loan, personal loan, or advance loan,Payday loan, title loan, personal loan, or advance loan,Checking or savings account,Money transfer, virtual currency, or money service,Money transfer, virtual currency, or money service])[trim(product#41, None)], trim(product#41, None)) END AS product#56, trim(issue#43, None) AS issue#57, substring(date_received#40, 1, 7) AS month#58, cast(company_response#52 IN (Closed with monetary relief,Closed with non-monetary relief,Closed with relief) as int) AS relief#59]
+Input [6]: [date_received#40, product#41, sub_product#42, issue#43, company#46, company_response#52]
+
+(12) HashAggregate
+Input [5]: [company#55, product#56, issue#57, month#58, relief#59]
+Keys [4]: [company#55, product#56, issue#57, month#58]
+Functions [2]: [partial_count(1), partial_sum(relief#59)]
+Aggregate Attributes [2]: [count#87L, sum#95L]
+Results [6]: [company#55, product#56, issue#57, month#58, count#89L, sum#96L]
+
+(13) Exchange
+Input [6]: [company#55, product#56, issue#57, month#58, count#89L, sum#96L]
+Arguments: hashpartitioning(company#55, product#56, issue#57, month#58, 200), ENSURE_REQUIREMENTS, [plan_id=58]
+
+(14) HashAggregate
+Input [6]: [company#55, product#56, issue#57, month#58, count#89L, sum#96L]
+Keys [4]: [company#55, product#56, issue#57, month#58]
+Functions [2]: [count(1), sum(relief#59)]
+Aggregate Attributes [2]: [count(1)#28L, sum(relief#59)#29L]
+Results [5]: [product#56, issue#57, month#58, count(1)#28L AS n#60L, sum(relief#59)#29L AS r#61L]
+
+(15) HashAggregate
+Input [5]: [product#56, issue#57, month#58, n#60L, r#61L]
+Keys [3]: [product#56, issue#57, month#58]
+Functions [2]: [partial_sum(n#60L), partial_sum(r#61L)]
+Aggregate Attributes [2]: [sum#91L, sum#92L]
+Results [5]: [product#56, issue#57, month#58, sum#93L, sum#94L]
+
+(16) Exchange
+Input [5]: [product#56, issue#57, month#58, sum#93L, sum#94L]
+Arguments: hashpartitioning(product#56, issue#57, month#58, 200), ENSURE_REQUIREMENTS, [plan_id=62]
+
+(17) HashAggregate
+Input [5]: [product#56, issue#57, month#58, sum#93L, sum#94L]
+Keys [3]: [product#56, issue#57, month#58]
+Functions [2]: [sum(n#60L), sum(r#61L)]
+Aggregate Attributes [2]: [sum(n#60L)#38L, sum(r#61L)#39L]
+Results [5]: [product#56, issue#57, month#58, sum(n#60L)#38L AS cat_n#30L, sum(r#61L)#39L AS cat_r#31L]
+
+(18) Sort
+Input [5]: [product#56, issue#57, month#58, cat_n#30L, cat_r#31L]
+Arguments: [product#56 ASC NULLS FIRST, issue#57 ASC NULLS FIRST, month#58 ASC NULLS FIRST], false, 0
+
+(19) SortMergeJoin
+Left keys [3]: [product#17, issue#18, month#19]
+Right keys [3]: [product#56, issue#57, month#58]
+Join type: Inner
+Join condition: None
+
+(20) Project
+Output [5]: [company#16, product#17, n#21L, ((cat_n#30L - n#21L) > 0) AS valid#63, CASE WHEN ((cat_n#30L - n#21L) > 0) THEN ((cast((n#21L * (cat_r#31L - r#22L)) as double) / cast((cat_n#30L - n#21L) as double)) - cast(r#22L as double)) END AS excess#64]
+Input [11]: [company#16, product#17, issue#18, month#19, n#21L, r#22L, product#56, issue#57, month#58, cat_n#30L, cat_r#31L]
+
+(21) HashAggregate
+Input [5]: [company#16, product#17, n#21L, valid#63, excess#64]
+Keys [2]: [company#16, product#17]
+Functions [4]: [partial_sum(CASE WHEN valid#63 THEN n#21L ELSE 0 END), partial_sum(excess#64), partial_sum(CASE WHEN NOT valid#63 THEN 1 ELSE 0 END), partial_sum(CASE WHEN NOT valid#63 THEN n#21L ELSE 0 END)]
+Aggregate Attributes [4]: [sum#79L, sum#80, sum#81L, sum#82L]
+Results [6]: [company#16, product#17, sum#83L, sum#84, sum#85L, sum#86L]
+
+(22) Exchange
+Input [6]: [company#16, product#17, sum#83L, sum#84, sum#85L, sum#86L]
+Arguments: hashpartitioning(company#16, product#17, 200), ENSURE_REQUIREMENTS, [plan_id=73]
+
+(23) HashAggregate
+Input [6]: [company#16, product#17, sum#83L, sum#84, sum#85L, sum#86L]
+Keys [2]: [company#16, product#17]
+Functions [4]: [sum(CASE WHEN valid#63 THEN n#21L ELSE 0 END), sum(excess#64), sum(CASE WHEN NOT valid#63 THEN 1 ELSE 0 END), sum(CASE WHEN NOT valid#63 THEN n#21L ELSE 0 END)]
+Aggregate Attributes [4]: [sum(CASE WHEN valid#63 THEN n#21L ELSE 0 END)#76L, sum(excess#64)#74, sum(CASE WHEN NOT valid#63 THEN 1 ELSE 0 END)#75L, sum(CASE WHEN NOT valid#63 THEN n#21L ELSE 0 END)#77L]
+Results [6]: [company#16, product#17, sum(CASE WHEN valid#63 THEN n#21L ELSE 0 END)#76L AS n_total#65L, sum(excess#64)#74 AS excess_total#66, sum(CASE WHEN NOT valid#63 THEN 1 ELSE 0 END)#75L AS dropped_cells#67L, sum(CASE WHEN NOT valid#63 THEN n#21L ELSE 0 END)#77L AS dropped_n#68L]
+
+(24) Project
+Output [7]: [company#16, product#17, n_total#65L, excess_total#66, dropped_cells#67L, dropped_n#68L, CASE WHEN (n_total#65L > 0) THEN (excess_total#66 / cast(n_total#65L as double)) END AS deviation#78]
+Input [6]: [company#16, product#17, n_total#65L, excess_total#66, dropped_cells#67L, dropped_n#68L]
+
+(25) AdaptiveSparkPlan
+Output [7]: [company#16, product#17, n_total#65L, excess_total#66, dropped_cells#67L, dropped_n#68L, deviation#78]
+Arguments: isFinalPlan=false
+
+
+
+=== EXPLAIN після запуску (AQE) ===
+== Physical Plan ==
+AdaptiveSparkPlan (55)
++- == Final Plan ==
+   ResultQueryStage (31)
+   +- * Project (30)
+      +- * HashAggregate (29)
+         +- AQEShuffleRead (28), coalesced
+            +- ShuffleQueryStage (27), Statistics(sizeInBytes=5.6 MiB, rowCount=5.09E+4)
+               +- Exchange (26)
+                  +- * HashAggregate (25)
+                     +- * Project (24)
+                        +- * BroadcastHashJoin Inner BuildRight (23)
+                           :- AQEShuffleRead (11), local
+                           :  +- ShuffleQueryStage (10), Statistics(sizeInBytes=113.1 MiB, rowCount=7.46E+5)
+                           :     +- Exchange (9)
+                           :        +- * HashAggregate (8)
+                           :           +- AQEShuffleRead (7), coalesced
+                           :              +- ShuffleQueryStage (6), Statistics(sizeInBytes=134.1 MiB, rowCount=8.85E+5)
+                           :                 +- Exchange (5)
+                           :                    +- * HashAggregate (4)
+                           :                       +- * Project (3)
+                           :                          +- * Filter (2)
+                           :                             +- Scan csv  (1)
+                           +- BroadcastQueryStage (22), Statistics(sizeInBytes=17.0 MiB, rowCount=1.86E+4)
+                              +- BroadcastExchange (21)
+                                 +- * HashAggregate (20)
+                                    +- AQEShuffleRead (19), coalesced
+                                       +- ShuffleQueryStage (18), Statistics(sizeInBytes=7.4 MiB, rowCount=6.26E+4)
+                                          +- Exchange (17)
+                                             +- * HashAggregate (16)
+                                                +- * HashAggregate (15)
+                                                   +- AQEShuffleRead (14), coalesced
+                                                      +- ShuffleQueryStage (13), Statistics(sizeInBytes=134.1 MiB, rowCount=8.85E+5)
+                                                         +- ReusedExchange (12)
++- == Initial Plan ==
+   Project (54)
+   +- HashAggregate (53)
+      +- Exchange (52)
+         +- HashAggregate (51)
+            +- Project (50)
+               +- SortMergeJoin Inner (49)
+                  :- Sort (38)
+                  :  +- Exchange (37)
+                  :     +- HashAggregate (36)
+                  :        +- Exchange (35)
+                  :           +- HashAggregate (34)
+                  :              +- Project (33)
+                  :                 +- Filter (32)
+                  :                    +- Scan csv  (1)
+                  +- Sort (48)
+                     +- HashAggregate (47)
+                        +- Exchange (46)
+                           +- HashAggregate (45)
+                              +- HashAggregate (44)
+                                 +- Exchange (43)
+                                    +- HashAggregate (42)
+                                       +- Project (41)
+                                          +- Filter (40)
+                                             +- Scan csv  (39)
+
+
+(1) Scan csv 
+Output [6]: [date_received#0, product#1, sub_product#2, issue#3, company#6, company_response#12]
+Batched: false
+Location: InMemoryFileIndex [file:/data/complaints.csv]
+PushedFilters: [In(company_response, [Closed,Closed with explanation,Closed with monetary relief,Closed with non-monetary relief,Closed with relief,Closed without relief])]
+ReadSchema: struct<date_received:string,product:string,sub_product:string,issue:string,company:string,company_response:string>
+
+(2) Filter [codegen id : 1]
+Input [6]: [date_received#0, product#1, sub_product#2, issue#3, company#6, company_response#12]
+Condition : (((((((((company_response#12 IN (Closed with monetary relief,Closed with non-monetary relief,Closed with relief,Closed with explanation,Closed,Closed without relief) AND isnotnull(trim(company#6, None))) AND NOT (trim(company#6, None) = )) AND isnotnull(trim(product#1, None))) AND NOT (trim(product#1, None) = )) AND isnotnull(trim(issue#3, None))) AND NOT (trim(issue#3, None) = )) AND coalesce(RLIKE(date_received#0, ^[0-9]{4}-(0[1-9]|1[0-2])-[0-9]{2}$), false)) AND isnotnull(CASE WHEN (trim(product#1, None) = Credit card or prepaid card) THEN CASE WHEN sub_product#2 IN (General-purpose credit card or charge card,Store credit card) THEN Credit card ELSE Prepaid card END ELSE coalesce(map(keys: [Credit reporting,Credit reporting, credit repair services, or other personal consumer reports,Payday loan,Payday loan, title loan, or personal loan,Bank account or service,Money transfers,Virtual currency], values: [Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,Payday loan, title loan, personal loan, or advance loan,Payday loan, title loan, personal loan, or advance loan,Checking or savings account,Money transfer, virtual currency, or money service,Money transfer, virtual currency, or money service])[trim(product#1, None)], trim(product#1, None)) END)) AND isnotnull(substring(date_received#0, 1, 7)))
+
+(3) Project [codegen id : 1]
+Output [5]: [upper(trim(company#6, None)) AS company#16, CASE WHEN (trim(product#1, None) = Credit card or prepaid card) THEN CASE WHEN sub_product#2 IN (General-purpose credit card or charge card,Store credit card) THEN Credit card ELSE Prepaid card END ELSE coalesce(map(keys: [Credit reporting,Credit reporting, credit repair services, or other personal consumer reports,Payday loan,Payday loan, title loan, or personal loan,Bank account or service,Money transfers,Virtual currency], values: [Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,Payday loan, title loan, personal loan, or advance loan,Payday loan, title loan, personal loan, or advance loan,Checking or savings account,Money transfer, virtual currency, or money service,Money transfer, virtual currency, or money service])[trim(product#1, None)], trim(product#1, None)) END AS product#17, trim(issue#3, None) AS issue#18, substring(date_received#0, 1, 7) AS month#19, cast(company_response#12 IN (Closed with monetary relief,Closed with non-monetary relief,Closed with relief) as int) AS relief#20]
+Input [6]: [date_received#0, product#1, sub_product#2, issue#3, company#6, company_response#12]
+
+(4) HashAggregate [codegen id : 1]
+Input [5]: [company#16, product#17, issue#18, month#19, relief#20]
+Keys [4]: [company#16, product#17, issue#18, month#19]
+Functions [2]: [partial_count(1), partial_sum(relief#20)]
+Aggregate Attributes [2]: [count#87L, sum#88L]
+Results [6]: [company#16, product#17, issue#18, month#19, count#89L, sum#90L]
+
+(5) Exchange
+Input [6]: [company#16, product#17, issue#18, month#19, count#89L, sum#90L]
+Arguments: hashpartitioning(company#16, product#17, issue#18, month#19, 200), ENSURE_REQUIREMENTS, [plan_id=123]
+
+(6) ShuffleQueryStage
+Output [6]: [company#16, product#17, issue#18, month#19, count#89L, sum#90L]
+Arguments: 0
+
+(7) AQEShuffleRead
+Input [6]: [company#16, product#17, issue#18, month#19, count#89L, sum#90L]
+Arguments: coalesced
+
+(8) HashAggregate [codegen id : 3]
+Input [6]: [company#16, product#17, issue#18, month#19, count#89L, sum#90L]
+Keys [4]: [company#16, product#17, issue#18, month#19]
+Functions [2]: [count(1), sum(relief#20)]
+Aggregate Attributes [2]: [count(1)#28L, sum(relief#20)#29L]
+Results [6]: [company#16, product#17, issue#18, month#19, count(1)#28L AS n#21L, sum(relief#20)#29L AS r#22L]
+
+(9) Exchange
+Input [6]: [company#16, product#17, issue#18, month#19, n#21L, r#22L]
+Arguments: hashpartitioning(product#17, issue#18, month#19, 200), ENSURE_REQUIREMENTS, [plan_id=234]
+
+(10) ShuffleQueryStage
+Output [6]: [company#16, product#17, issue#18, month#19, n#21L, r#22L]
+Arguments: 3
+
+(11) AQEShuffleRead
+Input [6]: [company#16, product#17, issue#18, month#19, n#21L, r#22L]
+Arguments: local
+
+(12) ReusedExchange [Reuses operator id: 5]
+Output [6]: [company#55, product#56, issue#57, month#58, count#89L, sum#96L]
+
+(13) ShuffleQueryStage
+Output [6]: [company#55, product#56, issue#57, month#58, count#89L, sum#96L]
+Arguments: 2
+
+(14) AQEShuffleRead
+Input [6]: [company#55, product#56, issue#57, month#58, count#89L, sum#96L]
+Arguments: coalesced
+
+(15) HashAggregate [codegen id : 4]
+Input [6]: [company#55, product#56, issue#57, month#58, count#89L, sum#96L]
+Keys [4]: [company#55, product#56, issue#57, month#58]
+Functions [2]: [count(1), sum(relief#59)]
+Aggregate Attributes [2]: [count(1)#28L, sum(relief#59)#29L]
+Results [5]: [product#56, issue#57, month#58, count(1)#28L AS n#60L, sum(relief#59)#29L AS r#61L]
+
+(16) HashAggregate [codegen id : 4]
+Input [5]: [product#56, issue#57, month#58, n#60L, r#61L]
+Keys [3]: [product#56, issue#57, month#58]
+Functions [2]: [partial_sum(n#60L), partial_sum(r#61L)]
+Aggregate Attributes [2]: [sum#91L, sum#92L]
+Results [5]: [product#56, issue#57, month#58, sum#93L, sum#94L]
+
+(17) Exchange
+Input [5]: [product#56, issue#57, month#58, sum#93L, sum#94L]
+Arguments: hashpartitioning(product#56, issue#57, month#58, 200), ENSURE_REQUIREMENTS, [plan_id=252]
+
+(18) ShuffleQueryStage
+Output [5]: [product#56, issue#57, month#58, sum#93L, sum#94L]
+Arguments: 4
+
+(19) AQEShuffleRead
+Input [5]: [product#56, issue#57, month#58, sum#93L, sum#94L]
+Arguments: coalesced
+
+(20) HashAggregate [codegen id : 5]
+Input [5]: [product#56, issue#57, month#58, sum#93L, sum#94L]
+Keys [3]: [product#56, issue#57, month#58]
+Functions [2]: [sum(n#60L), sum(r#61L)]
+Aggregate Attributes [2]: [sum(n#60L)#38L, sum(r#61L)#39L]
+Results [5]: [product#56, issue#57, month#58, sum(n#60L)#38L AS cat_n#30L, sum(r#61L)#39L AS cat_r#31L]
+
+(21) BroadcastExchange
+Input [5]: [product#56, issue#57, month#58, cat_n#30L, cat_r#31L]
+Arguments: HashedRelationBroadcastMode(List(input[0, string, true], input[1, string, true], input[2, string, true]),false), [plan_id=352]
+
+(22) BroadcastQueryStage
+Output [5]: [product#56, issue#57, month#58, cat_n#30L, cat_r#31L]
+Arguments: 5
+
+(23) BroadcastHashJoin [codegen id : 6]
+Left keys [3]: [product#17, issue#18, month#19]
+Right keys [3]: [product#56, issue#57, month#58]
+Join type: Inner
+Join condition: None
+
+(24) Project [codegen id : 6]
+Output [5]: [company#16, product#17, n#21L, ((cat_n#30L - n#21L) > 0) AS valid#63, CASE WHEN ((cat_n#30L - n#21L) > 0) THEN ((cast((n#21L * (cat_r#31L - r#22L)) as double) / cast((cat_n#30L - n#21L) as double)) - cast(r#22L as double)) END AS excess#64]
+Input [11]: [company#16, product#17, issue#18, month#19, n#21L, r#22L, product#56, issue#57, month#58, cat_n#30L, cat_r#31L]
+
+(25) HashAggregate [codegen id : 6]
+Input [5]: [company#16, product#17, n#21L, valid#63, excess#64]
+Keys [2]: [company#16, product#17]
+Functions [4]: [partial_sum(CASE WHEN valid#63 THEN n#21L ELSE 0 END), partial_sum(excess#64), partial_sum(CASE WHEN NOT valid#63 THEN 1 ELSE 0 END), partial_sum(CASE WHEN NOT valid#63 THEN n#21L ELSE 0 END)]
+Aggregate Attributes [4]: [sum#79L, sum#80, sum#81L, sum#82L]
+Results [6]: [company#16, product#17, sum#83L, sum#84, sum#85L, sum#86L]
+
+(26) Exchange
+Input [6]: [company#16, product#17, sum#83L, sum#84, sum#85L, sum#86L]
+Arguments: hashpartitioning(company#16, product#17, 200), ENSURE_REQUIREMENTS, [plan_id=409]
+
+(27) ShuffleQueryStage
+Output [6]: [company#16, product#17, sum#83L, sum#84, sum#85L, sum#86L]
+Arguments: 6
+
+(28) AQEShuffleRead
+Input [6]: [company#16, product#17, sum#83L, sum#84, sum#85L, sum#86L]
+Arguments: coalesced
+
+(29) HashAggregate [codegen id : 7]
+Input [6]: [company#16, product#17, sum#83L, sum#84, sum#85L, sum#86L]
+Keys [2]: [company#16, product#17]
+Functions [4]: [sum(CASE WHEN valid#63 THEN n#21L ELSE 0 END), sum(excess#64), sum(CASE WHEN NOT valid#63 THEN 1 ELSE 0 END), sum(CASE WHEN NOT valid#63 THEN n#21L ELSE 0 END)]
+Aggregate Attributes [4]: [sum(CASE WHEN valid#63 THEN n#21L ELSE 0 END)#76L, sum(excess#64)#74, sum(CASE WHEN NOT valid#63 THEN 1 ELSE 0 END)#75L, sum(CASE WHEN NOT valid#63 THEN n#21L ELSE 0 END)#77L]
+Results [6]: [company#16, product#17, sum(CASE WHEN valid#63 THEN n#21L ELSE 0 END)#76L AS n_total#65L, sum(excess#64)#74 AS excess_total#66, sum(CASE WHEN NOT valid#63 THEN 1 ELSE 0 END)#75L AS dropped_cells#67L, sum(CASE WHEN NOT valid#63 THEN n#21L ELSE 0 END)#77L AS dropped_n#68L]
+
+(30) Project [codegen id : 7]
+Output [7]: [company#16, product#17, n_total#65L, excess_total#66, dropped_cells#67L, dropped_n#68L, CASE WHEN (n_total#65L > 0) THEN (excess_total#66 / cast(n_total#65L as double)) END AS deviation#78]
+Input [6]: [company#16, product#17, n_total#65L, excess_total#66, dropped_cells#67L, dropped_n#68L]
+
+(31) ResultQueryStage
+Output [7]: [company#16, product#17, n_total#65L, excess_total#66, dropped_cells#67L, dropped_n#68L, deviation#78]
+Arguments: 7
+
+(32) Filter
+Input [6]: [date_received#0, product#1, sub_product#2, issue#3, company#6, company_response#12]
+Condition : (((((((((company_response#12 IN (Closed with monetary relief,Closed with non-monetary relief,Closed with relief,Closed with explanation,Closed,Closed without relief) AND isnotnull(trim(company#6, None))) AND NOT (trim(company#6, None) = )) AND isnotnull(trim(product#1, None))) AND NOT (trim(product#1, None) = )) AND isnotnull(trim(issue#3, None))) AND NOT (trim(issue#3, None) = )) AND coalesce(RLIKE(date_received#0, ^[0-9]{4}-(0[1-9]|1[0-2])-[0-9]{2}$), false)) AND isnotnull(CASE WHEN (trim(product#1, None) = Credit card or prepaid card) THEN CASE WHEN sub_product#2 IN (General-purpose credit card or charge card,Store credit card) THEN Credit card ELSE Prepaid card END ELSE coalesce(map(keys: [Credit reporting,Credit reporting, credit repair services, or other personal consumer reports,Payday loan,Payday loan, title loan, or personal loan,Bank account or service,Money transfers,Virtual currency], values: [Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,Payday loan, title loan, personal loan, or advance loan,Payday loan, title loan, personal loan, or advance loan,Checking or savings account,Money transfer, virtual currency, or money service,Money transfer, virtual currency, or money service])[trim(product#1, None)], trim(product#1, None)) END)) AND isnotnull(substring(date_received#0, 1, 7)))
+
+(33) Project
+Output [5]: [upper(trim(company#6, None)) AS company#16, CASE WHEN (trim(product#1, None) = Credit card or prepaid card) THEN CASE WHEN sub_product#2 IN (General-purpose credit card or charge card,Store credit card) THEN Credit card ELSE Prepaid card END ELSE coalesce(map(keys: [Credit reporting,Credit reporting, credit repair services, or other personal consumer reports,Payday loan,Payday loan, title loan, or personal loan,Bank account or service,Money transfers,Virtual currency], values: [Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,Payday loan, title loan, personal loan, or advance loan,Payday loan, title loan, personal loan, or advance loan,Checking or savings account,Money transfer, virtual currency, or money service,Money transfer, virtual currency, or money service])[trim(product#1, None)], trim(product#1, None)) END AS product#17, trim(issue#3, None) AS issue#18, substring(date_received#0, 1, 7) AS month#19, cast(company_response#12 IN (Closed with monetary relief,Closed with non-monetary relief,Closed with relief) as int) AS relief#20]
+Input [6]: [date_received#0, product#1, sub_product#2, issue#3, company#6, company_response#12]
+
+(34) HashAggregate
+Input [5]: [company#16, product#17, issue#18, month#19, relief#20]
+Keys [4]: [company#16, product#17, issue#18, month#19]
+Functions [2]: [partial_count(1), partial_sum(relief#20)]
+Aggregate Attributes [2]: [count#87L, sum#88L]
+Results [6]: [company#16, product#17, issue#18, month#19, count#89L, sum#90L]
+
+(35) Exchange
+Input [6]: [company#16, product#17, issue#18, month#19, count#89L, sum#90L]
+Arguments: hashpartitioning(company#16, product#17, issue#18, month#19, 200), ENSURE_REQUIREMENTS, [plan_id=56]
+
+(36) HashAggregate
+Input [6]: [company#16, product#17, issue#18, month#19, count#89L, sum#90L]
+Keys [4]: [company#16, product#17, issue#18, month#19]
+Functions [2]: [count(1), sum(relief#20)]
+Aggregate Attributes [2]: [count(1)#28L, sum(relief#20)#29L]
+Results [6]: [company#16, product#17, issue#18, month#19, count(1)#28L AS n#21L, sum(relief#20)#29L AS r#22L]
+
+(37) Exchange
+Input [6]: [company#16, product#17, issue#18, month#19, n#21L, r#22L]
+Arguments: hashpartitioning(product#17, issue#18, month#19, 200), ENSURE_REQUIREMENTS, [plan_id=66]
+
+(38) Sort
+Input [6]: [company#16, product#17, issue#18, month#19, n#21L, r#22L]
+Arguments: [product#17 ASC NULLS FIRST, issue#18 ASC NULLS FIRST, month#19 ASC NULLS FIRST], false, 0
+
+(39) Scan csv 
+Output [6]: [date_received#40, product#41, sub_product#42, issue#43, company#46, company_response#52]
+Batched: false
+Location: InMemoryFileIndex [file:/data/complaints.csv]
+PushedFilters: [In(company_response, [Closed,Closed with explanation,Closed with monetary relief,Closed with non-monetary relief,Closed with relief,Closed without relief])]
+ReadSchema: struct<date_received:string,product:string,sub_product:string,issue:string,company:string,company_response:string>
+
+(40) Filter
+Input [6]: [date_received#40, product#41, sub_product#42, issue#43, company#46, company_response#52]
+Condition : (((((((((company_response#52 IN (Closed with monetary relief,Closed with non-monetary relief,Closed with relief,Closed with explanation,Closed,Closed without relief) AND isnotnull(trim(company#46, None))) AND NOT (trim(company#46, None) = )) AND isnotnull(trim(product#41, None))) AND NOT (trim(product#41, None) = )) AND isnotnull(trim(issue#43, None))) AND NOT (trim(issue#43, None) = )) AND coalesce(RLIKE(date_received#40, ^[0-9]{4}-(0[1-9]|1[0-2])-[0-9]{2}$), false)) AND isnotnull(CASE WHEN (trim(product#41, None) = Credit card or prepaid card) THEN CASE WHEN sub_product#42 IN (General-purpose credit card or charge card,Store credit card) THEN Credit card ELSE Prepaid card END ELSE coalesce(map(keys: [Credit reporting,Credit reporting, credit repair services, or other personal consumer reports,Payday loan,Payday loan, title loan, or personal loan,Bank account or service,Money transfers,Virtual currency], values: [Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,Payday loan, title loan, personal loan, or advance loan,Payday loan, title loan, personal loan, or advance loan,Checking or savings account,Money transfer, virtual currency, or money service,Money transfer, virtual currency, or money service])[trim(product#41, None)], trim(product#41, None)) END)) AND isnotnull(substring(date_received#40, 1, 7)))
+
+(41) Project
+Output [5]: [upper(trim(company#46, None)) AS company#55, CASE WHEN (trim(product#41, None) = Credit card or prepaid card) THEN CASE WHEN sub_product#42 IN (General-purpose credit card or charge card,Store credit card) THEN Credit card ELSE Prepaid card END ELSE coalesce(map(keys: [Credit reporting,Credit reporting, credit repair services, or other personal consumer reports,Payday loan,Payday loan, title loan, or personal loan,Bank account or service,Money transfers,Virtual currency], values: [Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,Payday loan, title loan, personal loan, or advance loan,Payday loan, title loan, personal loan, or advance loan,Checking or savings account,Money transfer, virtual currency, or money service,Money transfer, virtual currency, or money service])[trim(product#41, None)], trim(product#41, None)) END AS product#56, trim(issue#43, None) AS issue#57, substring(date_received#40, 1, 7) AS month#58, cast(company_response#52 IN (Closed with monetary relief,Closed with non-monetary relief,Closed with relief) as int) AS relief#59]
+Input [6]: [date_received#40, product#41, sub_product#42, issue#43, company#46, company_response#52]
+
+(42) HashAggregate
+Input [5]: [company#55, product#56, issue#57, month#58, relief#59]
+Keys [4]: [company#55, product#56, issue#57, month#58]
+Functions [2]: [partial_count(1), partial_sum(relief#59)]
+Aggregate Attributes [2]: [count#87L, sum#95L]
+Results [6]: [company#55, product#56, issue#57, month#58, count#89L, sum#96L]
+
+(43) Exchange
+Input [6]: [company#55, product#56, issue#57, month#58, count#89L, sum#96L]
+Arguments: hashpartitioning(company#55, product#56, issue#57, month#58, 200), ENSURE_REQUIREMENTS, [plan_id=58]
+
+(44) HashAggregate
+Input [6]: [company#55, product#56, issue#57, month#58, count#89L, sum#96L]
+Keys [4]: [company#55, product#56, issue#57, month#58]
+Functions [2]: [count(1), sum(relief#59)]
+Aggregate Attributes [2]: [count(1)#28L, sum(relief#59)#29L]
+Results [5]: [product#56, issue#57, month#58, count(1)#28L AS n#60L, sum(relief#59)#29L AS r#61L]
+
+(45) HashAggregate
+Input [5]: [product#56, issue#57, month#58, n#60L, r#61L]
+Keys [3]: [product#56, issue#57, month#58]
+Functions [2]: [partial_sum(n#60L), partial_sum(r#61L)]
+Aggregate Attributes [2]: [sum#91L, sum#92L]
+Results [5]: [product#56, issue#57, month#58, sum#93L, sum#94L]
+
+(46) Exchange
+Input [5]: [product#56, issue#57, month#58, sum#93L, sum#94L]
+Arguments: hashpartitioning(product#56, issue#57, month#58, 200), ENSURE_REQUIREMENTS, [plan_id=62]
+
+(47) HashAggregate
+Input [5]: [product#56, issue#57, month#58, sum#93L, sum#94L]
+Keys [3]: [product#56, issue#57, month#58]
+Functions [2]: [sum(n#60L), sum(r#61L)]
+Aggregate Attributes [2]: [sum(n#60L)#38L, sum(r#61L)#39L]
+Results [5]: [product#56, issue#57, month#58, sum(n#60L)#38L AS cat_n#30L, sum(r#61L)#39L AS cat_r#31L]
+
+(48) Sort
+Input [5]: [product#56, issue#57, month#58, cat_n#30L, cat_r#31L]
+Arguments: [product#56 ASC NULLS FIRST, issue#57 ASC NULLS FIRST, month#58 ASC NULLS FIRST], false, 0
+
+(49) SortMergeJoin
+Left keys [3]: [product#17, issue#18, month#19]
+Right keys [3]: [product#56, issue#57, month#58]
+Join type: Inner
+Join condition: None
+
+(50) Project
+Output [5]: [company#16, product#17, n#21L, ((cat_n#30L - n#21L) > 0) AS valid#63, CASE WHEN ((cat_n#30L - n#21L) > 0) THEN ((cast((n#21L * (cat_r#31L - r#22L)) as double) / cast((cat_n#30L - n#21L) as double)) - cast(r#22L as double)) END AS excess#64]
+Input [11]: [company#16, product#17, issue#18, month#19, n#21L, r#22L, product#56, issue#57, month#58, cat_n#30L, cat_r#31L]
+
+(51) HashAggregate
+Input [5]: [company#16, product#17, n#21L, valid#63, excess#64]
+Keys [2]: [company#16, product#17]
+Functions [4]: [partial_sum(CASE WHEN valid#63 THEN n#21L ELSE 0 END), partial_sum(excess#64), partial_sum(CASE WHEN NOT valid#63 THEN 1 ELSE 0 END), partial_sum(CASE WHEN NOT valid#63 THEN n#21L ELSE 0 END)]
+Aggregate Attributes [4]: [sum#79L, sum#80, sum#81L, sum#82L]
+Results [6]: [company#16, product#17, sum#83L, sum#84, sum#85L, sum#86L]
+
+(52) Exchange
+Input [6]: [company#16, product#17, sum#83L, sum#84, sum#85L, sum#86L]
+Arguments: hashpartitioning(company#16, product#17, 200), ENSURE_REQUIREMENTS, [plan_id=73]
+
+(53) HashAggregate
+Input [6]: [company#16, product#17, sum#83L, sum#84, sum#85L, sum#86L]
+Keys [2]: [company#16, product#17]
+Functions [4]: [sum(CASE WHEN valid#63 THEN n#21L ELSE 0 END), sum(excess#64), sum(CASE WHEN NOT valid#63 THEN 1 ELSE 0 END), sum(CASE WHEN NOT valid#63 THEN n#21L ELSE 0 END)]
+Aggregate Attributes [4]: [sum(CASE WHEN valid#63 THEN n#21L ELSE 0 END)#76L, sum(excess#64)#74, sum(CASE WHEN NOT valid#63 THEN 1 ELSE 0 END)#75L, sum(CASE WHEN NOT valid#63 THEN n#21L ELSE 0 END)#77L]
+Results [6]: [company#16, product#17, sum(CASE WHEN valid#63 THEN n#21L ELSE 0 END)#76L AS n_total#65L, sum(excess#64)#74 AS excess_total#66, sum(CASE WHEN NOT valid#63 THEN 1 ELSE 0 END)#75L AS dropped_cells#67L, sum(CASE WHEN NOT valid#63 THEN n#21L ELSE 0 END)#77L AS dropped_n#68L]
+
+(54) Project
+Output [7]: [company#16, product#17, n_total#65L, excess_total#66, dropped_cells#67L, dropped_n#68L, CASE WHEN (n_total#65L > 0) THEN (excess_total#66 / cast(n_total#65L as double)) END AS deviation#78]
+Input [6]: [company#16, product#17, n_total#65L, excess_total#66, dropped_cells#67L, dropped_n#68L]
+
+(55) AdaptiveSparkPlan
+Output [7]: [company#16, product#17, n_total#65L, excess_total#66, dropped_cells#67L, dropped_n#68L, deviation#78]
+Arguments: isFinalPlan=true
+
+

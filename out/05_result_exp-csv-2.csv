@@ -1,0 +1,499 @@
+rank,company,product,n_total,excess_total,deviation_pp
+1,EXPERIAN INFORMATION SOLUTIONS INC.,Credit card,18250,9353.61,51.25
+2,"CASCADE CISS HOLDINGS, LLC",Credit reporting or other personal consumer reports,1627,733.45,45.08
+3,MOHELA,Credit reporting or other personal consumer reports,3357,1484.69,44.23
+4,ADVANCED RESOLUTION SERVICES INC.,Credit reporting or other personal consumer reports,2464,1043.31,42.34
+5,"MAXIMUS FEDERAL SERVICES, INC.",Credit reporting or other personal consumer reports,4435,1849.63,41.71
+6,"AFFIRM HOLDINGS, INC",Credit reporting or other personal consumer reports,7716,3212.30,41.63
+7,EDFINANCIAL SERVICES,Credit reporting or other personal consumer reports,2856,1184.89,41.49
+8,LCI ACQUISITION INC.,Credit reporting or other personal consumer reports,3278,1359.05,41.46
+9,"OPEN DEALER EXCHANGE, LLC",Credit reporting or other personal consumer reports,1445,598.22,41.40
+10,SELF FINANCIAL INC.,Credit reporting or other personal consumer reports,8080,3342.34,41.37
+11,"AVANT HOLDING COMPANY, INC.",Credit reporting or other personal consumer reports,1085,444.73,40.99
+12,"FACTORTRUST, INC.",Credit reporting or other personal consumer reports,1903,767.99,40.36
+13,"UPSTART HOLDINGS, INC.",Credit reporting or other personal consumer reports,1626,655.13,40.29
+14,BRIDGECREST ACCEPTANCE CORPORATION,Credit reporting or other personal consumer reports,3056,1229.28,40.23
+15,"SUNRISE CREDIT SERVICES, INC",Credit reporting or other personal consumer reports,1270,505.62,39.81
+16,"CONTINENTAL FINANCE COMPANY, LLC",Credit reporting or other personal consumer reports,1175,466.55,39.71
+17,"UPGRADE, INC.",Credit reporting or other personal consumer reports,1851,733.22,39.61
+18,"ALDOUS & ASSOCIATES, PLLC",Credit reporting or other personal consumer reports,1043,410.86,39.39
+19,FC HOLDCO LLC,Credit reporting or other personal consumer reports,2009,786.83,39.17
+20,NCB MANAGEMENT SERVICES INC.,Credit reporting or other personal consumer reports,1883,735.74,39.07
+21,"EARLY WARNING SERVICES, LLC",Credit reporting or other personal consumer reports,12732,4954.26,38.91
+22,MERCEDES BENZ FINANCIAL SERVICES,Credit reporting or other personal consumer reports,1597,613.88,38.44
+23,"WESTLAKE SERVICES, LLC",Credit reporting or other personal consumer reports,5202,1999.12,38.43
+24,"ENOVA INTERNATIONAL, INC.",Credit reporting or other personal consumer reports,1421,542.98,38.21
+25,KIKOFF INC.,Credit reporting or other personal consumer reports,4483,1710.69,38.16
+26,"NELNET, INC.",Credit reporting or other personal consumer reports,9751,3713.06,38.08
+27,TRANSWORLD SYSTEMS INC,Credit reporting or other personal consumer reports,3413,1296.21,37.98
+28,POSSIBLE FINANCIAL INC,Credit reporting or other personal consumer reports,1434,544.08,37.94
+29,"NATIONAL CREDIT SYSTEMS,INC.",Credit reporting or other personal consumer reports,4829,1827.02,37.83
+30,"PROCOLLECT, INC.",Credit reporting or other personal consumer reports,1196,452.35,37.82
+31,EXPERIAN INFORMATION SOLUTIONS INC.,Credit reporting or other personal consumer reports,4279863,1618328.11,37.81
+32,"EXETER FINANCE, LLC.",Credit reporting or other personal consumer reports,5032,1880.25,37.37
+33,"CARMAX, INC.",Credit reporting or other personal consumer reports,2137,797.90,37.34
+34,"FAIR COLLECTIONS & OUTSOURCING, INC.",Credit reporting or other personal consumer reports,1395,517.75,37.11
+35,"CONSUMER PORTFOLIO SERVICES, INC.",Credit reporting or other personal consumer reports,2152,797.99,37.08
+36,"NATIONAL CREDIT ADJUSTERS, LLC",Credit reporting or other personal consumer reports,2640,972.07,36.82
+37,"FIDELITY NATIONAL INFORMATION SERVICES, INC. (FNIS)",Credit reporting or other personal consumer reports,18770,6831.13,36.39
+38,ARMY AND AIR FORCE EXCHANGE SERVICE,Credit reporting or other personal consumer reports,1023,371.86,36.35
+39,MR. COOPER GROUP INC.,Credit reporting or other personal consumer reports,1550,560.52,36.16
+40,SYNOVUS BANK,Credit reporting or other personal consumer reports,1834,657.84,35.87
+41,FREEDOM MORTGAGE COMPANY,Credit reporting or other personal consumer reports,1118,396.47,35.46
+42,"MARINER FINANCE, LLC",Credit reporting or other personal consumer reports,1143,404.18,35.36
+43,TRUIST FINANCIAL CORPORATION,Credit reporting or other personal consumer reports,5425,1897.82,34.98
+44,"BMW FINANCIAL SERVICES NA, LLC",Credit reporting or other personal consumer reports,1563,543.30,34.76
+45,CORELOGIC INC,Credit reporting or other personal consumer reports,9755,3389.26,34.74
+46,"ROWLAND AVENUE MANAGEMENT, INC. A/KA COLUMBIA DEBT RECOVERY, LLC D/B/A GENESIS",Credit reporting or other personal consumer reports,1505,520.99,34.62
+47,MICROBILT / PRBC (FORMERLY CL VERIFY),Credit reporting or other personal consumer reports,2236,768.23,34.36
+48,BARCLAYS BANK DELAWARE,Credit reporting or other personal consumer reports,7462,2558.14,34.28
+49,"COLONY BRANDS, INC.",Credit reporting or other personal consumer reports,1215,415.85,34.23
+50,NISSAN MOTOR ACCEPTANCE COMPANY LLC,Credit reporting or other personal consumer reports,2106,712.95,33.85
+51,"CITIZENS FINANCIAL GROUP, INC.",Credit reporting or other personal consumer reports,1816,614.75,33.85
+52,"ACIMA CREDIT, LLC",Credit reporting or other personal consumer reports,1458,493.10,33.82
+53,"AMERICAN CREDIT ACCEPTANCE, LLC",Credit reporting or other personal consumer reports,1668,561.13,33.64
+54,PNC BANK N.A.,Credit reporting or other personal consumer reports,2249,749.84,33.34
+55,CREDIT ACCEPTANCE CORPORATION,Credit reporting or other personal consumer reports,6039,1989.55,32.95
+56,FIRST ADVANTAGE CORPORATION,Credit reporting or other personal consumer reports,1860,608.58,32.72
+57,ALLY FINANCIAL INC.,Credit reporting or other personal consumer reports,11090,3623.66,32.67
+58,"SHELLPOINT PARTNERS, LLC",Credit reporting or other personal consumer reports,1872,606.49,32.40
+59,HYUNDAI CAPITAL AMERICA,Credit reporting or other personal consumer reports,2896,934.66,32.27
+60,GLOBAL LENDING SERVICES LLC,Credit reporting or other personal consumer reports,3143,994.07,31.63
+61,INCOMM HOLDINGS INC.,Prepaid card,3411,1073.28,31.47
+62,TOYOTA MOTOR CREDIT CORPORATION,Credit reporting or other personal consumer reports,3777,1185.56,31.39
+63,"I.C. SYSTEM, INC.",Credit reporting or other personal consumer reports,5065,1588.04,31.35
+64,ONEMAIN FINANCE CORPORATION,Credit reporting or other personal consumer reports,6376,1997.29,31.33
+65,"CHECKR, INC",Credit reporting or other personal consumer reports,2099,651.45,31.04
+66,"ROCKET MORTGAGE, LLC",Credit reporting or other personal consumer reports,1193,366.43,30.72
+67,"AFFIRM HOLDINGS, INC",Credit card,1069,326.65,30.56
+68,"CONTINENTAL FINANCE COMPANY, LLC",Credit card,1628,493.39,30.31
+69,"AVANT HOLDING COMPANY, INC.",Credit card,1424,429.37,30.15
+70,SLM CORPORATION,Credit reporting or other personal consumer reports,1186,347.66,29.31
+71,"BLOCK, INC.",Credit card,1813,522.41,28.81
+72,WORLD ACCEPTANCE CORPORATION,Credit reporting or other personal consumer reports,1995,565.30,28.34
+73,"NATIONAL CONSUMER TELECOM & UTILITIES EXCHANGE, INC.",Credit reporting or other personal consumer reports,2230,629.51,28.23
+74,CHIME FINANCIAL INC,Credit reporting or other personal consumer reports,1137,317.91,27.96
+75,SELF FINANCIAL INC.,Credit card,1179,329.31,27.93
+76,MONEYLION INC.,Credit reporting or other personal consumer reports,1404,389.35,27.73
+77,OPORTUN FINANCIAL CORPORATION,Credit reporting or other personal consumer reports,1076,296.59,27.56
+78,AMERICAN HONDA FINANCE CORP,Credit reporting or other personal consumer reports,1897,512.37,27.01
+79,NETSPEND CORPORATION,Prepaid card,3396,911.45,26.84
+80,"JOHN C. HEATH, ATTORNEY AT LAW, PLLC",Credit reporting or other personal consumer reports,1018,272.43,26.76
+81,"CONVERGENT RESOURCES, INC.",Credit reporting or other personal consumer reports,1371,351.05,25.61
+82,BB&T CORPORATION,Checking or savings account,2714,689.33,25.40
+83,FIFTH THIRD FINANCIAL CORPORATION,Credit reporting or other personal consumer reports,1690,427.48,25.29
+84,"BOUNCE AI, INC.",Debt collection,1267,316.38,24.97
+85,"COLLECTION MANAGEMENT HOLDINGS, LLC",Debt collection,2528,626.28,24.77
+86,FORD MOTOR CREDIT CO.,Credit reporting or other personal consumer reports,1589,392.58,24.71
+87,CONDUENT INCORPORATED,Prepaid card,2039,501.70,24.61
+88,"CCS FINANCIAL SERVICES, INC.",Credit reporting or other personal consumer reports,5876,1430.75,24.35
+89,OCWEN FINANCIAL CORPORATION,Credit reporting or other personal consumer reports,1124,273.59,24.34
+90,VW CREDIT,Credit reporting or other personal consumer reports,1054,249.00,23.62
+91,TRUEACCORD CORP.,Debt collection,5232,1231.71,23.54
+92,ZIONS DEBT HOLDINGS,Debt collection,1361,319.48,23.47
+93,"ALDOUS & ASSOCIATES, PLLC",Debt collection,5436,1270.52,23.37
+94,CENTRAL PORTFOLIO CONTROL INC.,Debt collection,2898,674.62,23.28
+95,"CAINE & WEINER COMPANY, INC.",Credit reporting or other personal consumer reports,3328,773.70,23.25
+96,"CREDIT CONTROL, LLC",Debt collection,3713,862.84,23.24
+97,POSSIBLE FINANCIAL INC,Debt collection,1229,285.12,23.20
+98,ABSOLUTE RESOLUTIONS CORP.,Debt collection,1950,449.68,23.06
+99,"AFFIRM HOLDINGS, INC",Debt collection,5224,1202.04,23.01
+100,SELF FINANCIAL INC.,Debt collection,2923,671.05,22.96
+101,"LOCKHART, MORRIS & MONTGOMERY INC.",Debt collection,2173,498.83,22.96
+102,UNIFIN INC.,Debt collection,1241,284.14,22.90
+103,HSBC NORTH AMERICA HOLDINGS INC.,Credit card,1733,394.58,22.77
+104,CREDIT CORP SOLUTIONS INC.,Debt collection,2672,601.20,22.50
+105,"HALSTED FINANCIAL SERVICES, LLC.",Debt collection,2165,485.06,22.40
+106,"SECURITY CREDIT SERVICES, LLC",Debt collection,3371,754.22,22.37
+107,SYNERGETIC COMMUNICATION INC,Debt collection,1106,247.37,22.37
+108,TEKCOLLECT INC.,Debt collection,1918,426.45,22.23
+109,VELOCITY PORTFOLIO GROUP,Debt collection,2008,446.32,22.23
+110,"EASTERN ACCOUNT SYSTEMS OF CONNECTICUT, INC.",Debt collection,2995,665.09,22.21
+111,BTH MANAGEMENT,Debt collection,2155,475.61,22.07
+112,"CAVALRY INVESTMENTS, LLC",Credit reporting or other personal consumer reports,1355,295.50,21.81
+113,RESURGENT CAPITAL SERVICES L.P.,Credit reporting or other personal consumer reports,18737,4070.25,21.72
+114,"SUNRISE CREDIT SERVICES, INC",Debt collection,6081,1319.35,21.70
+115,NCB MANAGEMENT SERVICES INC.,Debt collection,5194,1126.19,21.68
+116,"RENTDEBT AUTOMATED COLLECTIONS, LLC",Debt collection,2081,448.29,21.54
+117,"BLOCK, INC.",Prepaid card,2644,569.45,21.54
+118,CHIME FINANCIAL INC,Credit card,2776,597.74,21.53
+119,"DIVERSIFIED ADJUSTMENT SERVICE, INC.",Debt collection,2374,510.38,21.50
+120,"EXETER FINANCE, LLC.",Debt collection,1878,403.58,21.49
+121,"UPGRADE, INC.",Debt collection,1161,249.06,21.45
+122,"NATIONAL CREDIT SYSTEMS,INC.",Debt collection,17307,3705.49,21.41
+123,"NAVIENT SOLUTIONS, LLC.",Credit reporting or other personal consumer reports,3784,805.13,21.28
+124,LJ ROSS ASSOCIATES,Debt collection,2228,471.71,21.17
+125,"FAIR COLLECTIONS & OUTSOURCING, INC.",Debt collection,5284,1111.88,21.04
+126,"WESTLAKE SERVICES, LLC",Debt collection,2637,554.27,21.02
+127,FIRSTPOINT COLLECTION RESOURCES,Debt collection,1323,277.60,20.98
+128,"BULL CITY FINANCIAL SOLUTIONS, INC",Debt collection,2163,452.81,20.93
+129,"CREDIT SYSTEMS INTERNATIONAL, INC.",Debt collection,2082,434.62,20.88
+130,UNITED SERVICES AUTOMOBILE ASSOCIATION,Credit reporting or other personal consumer reports,2893,602.92,20.84
+131,FIRST CREDIT SERVICES INC.,Debt collection,1574,327.63,20.81
+132,"CREDIT KARMA, LLC",Credit reporting or other personal consumer reports,2691,559.44,20.79
+133,"EXPERT GLOBAL SOLUTIONS, INC.",Debt collection,1548,321.59,20.77
+134,TRANSWORLD SYSTEMS INC,Debt collection,17555,3643.95,20.76
+135,"WAYPOINT RESOURCE GROUP, LLC",Debt collection,2155,446.98,20.74
+136,"UNITED COLLECTION BUREAU, INC.",Debt collection,1747,362.18,20.73
+137,"NATIONAL CREDIT ADJUSTERS, LLC",Debt collection,8374,1734.46,20.71
+138,"PROCOLLECT, INC.",Debt collection,5321,1100.61,20.68
+139,BRIDGECREST ACCEPTANCE CORPORATION,Debt collection,1404,290.27,20.67
+140,CONTRACT CALLERS INC,Debt collection,1580,324.61,20.54
+141,KIKOFF INC.,Debt collection,2132,428.45,20.10
+142,"ENOVA INTERNATIONAL, INC.",Debt collection,1845,370.34,20.07
+143,INNOVIS,Credit reporting or other personal consumer reports,1472,294.61,20.01
+144,"KIMBALL, TIREY & ST. JOHN LLP",Debt collection,1015,202.73,19.97
+145,PENTAGON FEDERAL CREDIT UNION,Credit reporting or other personal consumer reports,1704,339.81,19.94
+146,NAVY FEDERAL CREDIT UNION,Credit reporting or other personal consumer reports,11310,2253.58,19.93
+147,"ABILITY RECOVERY SERVICES, LLC",Debt collection,3815,758.83,19.89
+148,"WILLIAMS & FUDGE, INC",Debt collection,1327,262.65,19.79
+149,"AARGON AGENCY, INC.",Debt collection,2919,574.83,19.69
+150,SOURCE RECEIVABLES MANAGEMENT LLC,Debt collection,3423,673.98,19.69
+151,"BANK OF AMERICA, NATIONAL ASSOCIATION",Credit reporting or other personal consumer reports,19866,3900.28,19.63
+152,FISERV FINXACT CORE,Prepaid card,1180,231.41,19.61
+153,"FIDELITY NATIONAL INFORMATION SERVICES, INC. (FNIS)",Checking or savings account,2313,453.17,19.59
+154,"FIRSTSOURCE BUSINESS PROCESS SERVICES, LLC",Debt collection,1324,258.63,19.53
+155,ROBINHOOD MARKETS INC.,Checking or savings account,1653,321.92,19.47
+156,RENT RECOVERY SOLUTIONS,Debt collection,1743,337.68,19.37
+157,"BLOCK, INC.",Checking or savings account,9357,1802.84,19.27
+158,"NELNET, INC.",Debt collection,1944,368.56,18.96
+159,NETSPEND CORPORATION,Checking or savings account,1630,308.54,18.93
+160,"THE BUREAUS, INC.",Debt collection,1712,323.47,18.89
+161,"DEBT RECOVERY SOLUTIONS, LLC",Debt collection,2695,505.11,18.74
+162,"SANTANDER BANK, NATIONAL ASSOCIATION",Checking or savings account,2475,462.48,18.69
+163,"EARLY WARNING SERVICES, LLC",Checking or savings account,2299,428.65,18.65
+164,"AMSHER COLLECTION SERVICES, INC.",Debt collection,4109,765.01,18.62
+165,AMERICAN CORADIUS INTERNATIONAL LLC,Debt collection,1052,195.77,18.61
+166,SYNOVUS BANK,Credit card,1448,269.26,18.60
+167,CONSUMER ADJUSTMENT COMPANY INCORPORATED,Debt collection,1887,350.01,18.55
+168,"PROFESSIONAL DEBT MEDIATION, INC.",Debt collection,1664,305.09,18.33
+169,CL HOLDINGS LLC,Credit reporting or other personal consumer reports,10950,2002.76,18.29
+170,PENN CREDIT CORPORATION,Debt collection,2509,455.66,18.16
+171,EXPERIAN INFORMATION SOLUTIONS INC.,Debt collection,51702,9345.12,18.07
+172,ERC,Credit reporting or other personal consumer reports,1815,323.19,17.81
+173,"CLGF HOLDCO 1, LLC",Credit reporting or other personal consumer reports,4071,718.62,17.65
+174,AMERICAN EXPRESS COMPANY,Credit reporting or other personal consumer reports,11895,2098.49,17.64
+175,PNC BANK N.A.,Credit card,2159,380.50,17.62
+176,CAPITAL ONE FINANCIAL CORPORATION,Credit reporting or other personal consumer reports,54089,9420.12,17.42
+177,"MEDICAL DATA SYSTEMS, INC.",Debt collection,2563,444.15,17.33
+178,"I.C. SYSTEM, INC.",Debt collection,21048,3636.43,17.28
+179,CNG FINANCIAL CORPORATION,Debt collection,1404,240.34,17.12
+180,"RECEIVABLES MANAGEMENT PARTNERS, LLC",Debt collection,1661,279.30,16.82
+181,TRUIST FINANCIAL CORPORATION,Credit card,1513,251.97,16.65
+182,"FIRST FEDERAL CREDIT CONTROL, INC.",Debt collection,1048,174.38,16.64
+183,"AR RESOURCES, INC.",Debt collection,1067,176.80,16.57
+184,BARCLAYS BANK DELAWARE,Debt collection,2998,493.30,16.45
+185,TOYOTA MOTOR CREDIT CORPORATION,Debt collection,1144,184.67,16.14
+186,"SANTANDER HOLDINGS USA, INC.",Checking or savings account,1368,220.38,16.11
+187,"GENERAL MOTORS FINANCIAL COMPANY, INC.",Credit reporting or other personal consumer reports,4824,776.33,16.09
+188,"STELLAR RECOVERY, INC.",Debt collection,1161,186.47,16.06
+189,UNITED REVENUE CORPORATION,Debt collection,1368,217.23,15.88
+190,"WESTERN UNION COMPANY, THE","Money transfer, virtual currency, or money service",4676,742.32,15.88
+191,"THE OUTSOURCE GROUP, INC",Debt collection,1229,193.36,15.73
+192,HSBC NORTH AMERICA HOLDINGS INC.,Debt collection,1990,309.16,15.54
+193,AMERICOLLECT,Debt collection,2073,318.76,15.38
+194,"SANTANDER HOLDINGS USA, INC.",Credit reporting or other personal consumer reports,7621,1162.39,15.25
+195,WINKLEVOSS EXCHANGE LLC,"Money transfer, virtual currency, or money service",1347,199.27,14.79
+196,"ID ANALYTICS, INC.",Credit reporting or other personal consumer reports,8644,1259.67,14.57
+197,ALLY FINANCIAL INC.,Debt collection,2699,386.26,14.31
+198,"RECEIVABLES PERFORMANCE MANAGEMENT, LLC",Debt collection,2228,318.22,14.28
+199,"FRANKLIN COLLECTION SERVICE, INC.",Debt collection,1510,215.34,14.26
+200,GOLDMAN SACHS BANK USA,Checking or savings account,3651,520.56,14.26
+201,TD BANK US HOLDING COMPANY,Credit reporting or other personal consumer reports,8637,1225.21,14.19
+202,CREDIT ACCEPTANCE CORPORATION,Debt collection,2607,369.29,14.17
+203,"POPULUS FINANCIAL GROUP, INC. (F/K/A ACE CASH EXPRESS)",Debt collection,1070,151.03,14.12
+204,AFNI INC.,Debt collection,4397,618.26,14.06
+205,HSBC NORTH AMERICA HOLDINGS INC.,Checking or savings account,2867,401.66,14.01
+206,"ROWLAND AVENUE MANAGEMENT, INC. A/KA COLUMBIA DEBT RECOVERY, LLC D/B/A GENESIS",Debt collection,6927,970.11,14.00
+207,"CMRE FINANCIAL SERVICES, INC.",Debt collection,1783,248.10,13.91
+208,"REMITLY, INC.","Money transfer, virtual currency, or money service",1056,146.77,13.90
+209,T.S. HOLDINGS,Credit reporting or other personal consumer reports,1344,185.25,13.78
+210,"NRA GROUP, LLC",Debt collection,3640,499.68,13.73
+211,TRUIST FINANCIAL CORPORATION,Debt collection,1532,208.58,13.61
+212,TENET HEALTHCARE CORPORATION,Debt collection,1198,162.89,13.60
+213,"CONVERGENT RESOURCES, INC.",Debt collection,7691,1041.27,13.54
+214,OCWEN FINANCIAL CORPORATION,Debt collection,1109,149.80,13.51
+215,ROBINHOOD MARKETS INC.,"Money transfer, virtual currency, or money service",2505,329.27,13.14
+216,JPMORGAN CHASE & CO.,Credit reporting or other personal consumer reports,22949,2981.60,12.99
+217,"CITIZENS FINANCIAL GROUP, INC.",Credit card,1151,149.18,12.96
+218,"HW HOLDING, INC",Credit reporting or other personal consumer reports,1546,196.90,12.74
+219,"CHARLES SCHWAB CORPORATION, THE",Checking or savings account,1202,152.84,12.72
+220,ONEMAIN FINANCE CORPORATION,Debt collection,2316,294.42,12.71
+221,"COMMONWEALTH FINANCIAL SYSTEMS, INC.",Debt collection,3553,451.04,12.69
+222,HCFS HEALTHCARE FINANCIAL SERVICES OF TEAMHEALTH,Debt collection,3335,421.32,12.63
+223,"GENERAL MOTORS FINANCIAL COMPANY, INC.",Debt collection,1236,155.61,12.59
+224,THE RECEIVABLE MANAGEMENT SERVICES LLC,Debt collection,1656,204.21,12.33
+225,V AND H PORTFOLIO,Debt collection,3086,379.56,12.30
+226,CAPITAL ONE FINANCIAL CORPORATION,Checking or savings account,23775,2908.13,12.23
+227,SANTANDER CONSUMER USA HOLDINGS INC.,Consumer Loan,2537,305.63,12.05
+228,"NAVIENT SOLUTIONS, LLC.",Debt collection,4069,484.14,11.90
+229,CHIME FINANCIAL INC,Checking or savings account,20037,2345.85,11.71
+230,"ACIMA CREDIT, LLC",Debt collection,1574,184.03,11.69
+231,R & B CORPORATION OF VIRGINIA,Debt collection,1112,126.96,11.42
+232,AD ASTRA RECOVERY SERVICES INC,Debt collection,1557,177.63,11.41
+233,"SOFI TECHNOLOGIES, INC.",Checking or savings account,5220,588.24,11.27
+234,FINCO SERVICES INC DBA CURRENT,Checking or savings account,1605,179.47,11.18
+235,CURO INTERMEDIATE HOLDINGS,Debt collection,1699,189.98,11.18
+236,LEXISNEXIS,Credit reporting or other personal consumer reports,74182,8292.87,11.18
+237,MIDWEST RECOVERY SYSTEMS,Debt collection,1541,172.23,11.18
+238,NAVY FEDERAL CREDIT UNION,Credit card,5658,618.66,10.93
+239,UNITED SERVICES AUTOMOBILE ASSOCIATION,Credit card,3928,422.36,10.75
+240,"CAPITAL ACCOUNTS, LLC",Debt collection,1091,117.06,10.73
+241,DISCOVER BANK,Credit reporting or other personal consumer reports,14264,1507.84,10.57
+242,"BMW FINANCIAL SERVICES NA, LLC",Vehicle loan or lease,1077,113.82,10.57
+243,"WAKEFIELD & ASSOCIATES, INC.",Debt collection,2258,234.59,10.39
+244,MONTEREY FINANCIAL SERVICES LLC,Debt collection,1819,188.23,10.35
+245,NISSAN MOTOR ACCEPTANCE COMPANY LLC,Vehicle loan or lease,2132,218.11,10.23
+246,BARCLAYS BANK DELAWARE,Credit card,17986,1775.35,9.87
+247,HYUNDAI CAPITAL AMERICA,Vehicle loan or lease,4227,415.73,9.84
+248,ALORICA INC.,Debt collection,1102,107.27,9.73
+249,"CCS FINANCIAL SERVICES, INC.",Debt collection,23754,2281.73,9.61
+250,"BIG PICTURE LOANS, LLC","Payday loan, title loan, personal loan, or advance loan",1005,95.43,9.50
+251,"WESTLAKE SERVICES, LLC",Vehicle loan or lease,5791,548.01,9.46
+252,MERCEDES BENZ FINANCIAL SERVICES,Vehicle loan or lease,1233,116.20,9.42
+253,"CLGF HOLDCO 1, LLC",Credit card,4045,370.06,9.15
+254,"BLOCK, INC.","Money transfer, virtual currency, or money service",58210,5325.18,9.15
+255,TRANSWORLD SYSTEMS INC,Student loan,1212,110.54,9.12
+256,SANTANDER CONSUMER USA HOLDINGS INC.,Credit reporting or other personal consumer reports,3620,328.55,9.08
+257,"BANK OF AMERICA, NATIONAL ASSOCIATION",Debt collection,8049,728.53,9.05
+258,BRIDGECREST ACCEPTANCE CORPORATION,Vehicle loan or lease,3143,284.17,9.04
+259,ACS EDUCATION SERVICES,Student loan,1166,104.22,8.94
+260,"EXETER FINANCE, LLC.",Vehicle loan or lease,2737,244.62,8.94
+261,FIFTH THIRD FINANCIAL CORPORATION,Credit card,1482,132.42,8.94
+262,"AFFIRM HOLDINGS, INC","Payday loan, title loan, personal loan, or advance loan",4347,385.93,8.88
+263,PNC BANK N.A.,"Money transfer, virtual currency, or money service",2577,225.37,8.75
+264,ATLANTICUS SERVICES CORPORATION,Credit reporting or other personal consumer reports,1718,144.64,8.42
+265,GREAT LAKES,Student loan,1183,99.04,8.37
+266,"ENOVA INTERNATIONAL, INC.","Payday loan, title loan, personal loan, or advance loan",2592,214.20,8.26
+267,JPMORGAN CHASE & CO.,Debt collection,8772,724.36,8.26
+268,FIRST NATIONAL BANK OF OMAHA,Credit card,2374,195.24,8.22
+269,PHOENIX FINANCIAL SERVICES LLC,Debt collection,2465,200.01,8.11
+270,HSBC NORTH AMERICA HOLDINGS INC.,Mortgage,4842,369.17,7.62
+271,TRUIST FINANCIAL CORPORATION,Checking or savings account,10306,774.53,7.52
+272,SANTANDER CONSUMER USA HOLDINGS INC.,Debt collection,1725,129.43,7.50
+273,"EOS HOLDINGS, INC.",Debt collection,2490,186.81,7.50
+274,"EVERBANK, NATIONAL ASSOCIATION",Mortgage,1280,93.73,7.32
+275,GLOBAL LENDING SERVICES LLC,Vehicle loan or lease,1423,104.01,7.31
+276,NATIONSTAR MORTGAGE LLC,Mortgage,18596,1325.98,7.13
+277,"PARAMOUNT GR HOLDINGS, LLC","Payday loan, title loan, personal loan, or advance loan",1494,106.07,7.10
+278,GOLDMAN SACHS BANK USA,Credit reporting or other personal consumer reports,5293,371.93,7.03
+279,CHIME FINANCIAL INC,"Money transfer, virtual currency, or money service",4047,280.07,6.92
+280,CAPITAL ONE FINANCIAL CORPORATION,Vehicle loan or lease,5069,345.46,6.82
+281,JPMORGAN CHASE & CO.,Credit card,47989,3267.34,6.81
+282,"SPRING OAKS CAPITAL, LLC",Credit reporting or other personal consumer reports,2628,177.47,6.75
+283,"LOANCARE, LLC",Mortgage,7329,487.01,6.65
+284,"SERVIS ONE, INC., TITUSVILLE, PA BRANCH",Mortgage,1188,78.02,6.57
+285,FREEDOM MORTGAGE COMPANY,Mortgage,9188,596.43,6.49
+286,"NAVIENT SOLUTIONS, LLC.",Student loan,35764,2278.98,6.37
+287,ENCORE CAPITAL GROUP INC.,Credit reporting or other personal consumer reports,12022,759.62,6.32
+288,SPECIALIZED LOAN SERVICING HOLDINGS LLC,Mortgage,7885,497.90,6.31
+289,"COMMUNITY LOAN SERVICING, LLC (FORMERLY KNOWN AS BAYVIEW LOAN SERVICING, LLC)",Mortgage,3637,228.88,6.29
+290,"NELNET, INC.",Student loan,16656,1046.12,6.28
+291,"CARMAX, INC.",Vehicle loan or lease,1223,76.40,6.25
+292,ROUNDPOINT MORTGAGE SERVICING LLC,Mortgage,2823,175.44,6.21
+293,OCWEN FINANCIAL CORPORATION,Mortgage,35746,2205.92,6.17
+294,FIFTH THIRD FINANCIAL CORPORATION,Checking or savings account,6211,381.25,6.14
+295,PNC BANK N.A.,Checking or savings account,15267,917.69,6.01
+296,CCF INTERMEDIATE HOLDINGS LLC,"Payday loan, title loan, personal loan, or advance loan",1352,81.09,6.00
+297,RUSHMORE LOAN MANAGEMENT SERVICES LLC,Mortgage,3410,204.52,6.00
+298,SELENE FINANCE LP,Mortgage,1607,95.81,5.96
+299,UNITED SERVICES AUTOMOBILE ASSOCIATION,Checking or savings account,9023,537.77,5.96
+300,"BSI FINANCIAL HOLDINGS, INC.",Mortgage,1347,79.90,5.93
+301,MR. COOPER GROUP INC.,Mortgage,13314,767.44,5.76
+302,"FLAGSTAR BANK, N.A.",Mortgage,3757,216.29,5.76
+303,BB&T CORPORATION,Mortgage,1286,73.12,5.69
+304,"LAKEVIEW LOAN SERVICING, LLC",Mortgage,2827,160.64,5.68
+305,"CLGF HOLDCO 1, LLC",Debt collection,1267,70.41,5.56
+306,"PLANET HOME LENDING, LLC",Mortgage,1709,94.95,5.56
+307,"SETERUS, INC.",Mortgage,4271,232.61,5.45
+308,"CARRINGTON MORTGAGE SERVICES, LLC",Mortgage,6485,340.93,5.26
+309,AMERICAN EXPRESS COMPANY,Credit card,33644,1752.53,5.21
+310,"FAY SERVICING, LLC",Mortgage,3721,193.52,5.20
+311,"AMERICAN CREDIT ACCEPTANCE, LLC",Vehicle loan or lease,1613,83.41,5.17
+312,"SANTANDER BANK, NATIONAL ASSOCIATION",Mortgage,1124,56.92,5.06
+313,"SELECT PORTFOLIO SERVICING, INC.",Mortgage,15244,766.23,5.03
+314,JPMORGAN CHASE & CO.,"Money transfer, virtual currency, or money service",9731,480.83,4.94
+315,"CAINE & WEINER COMPANY, INC.",Debt collection,12208,583.54,4.78
+316,SELENE HOLDINGS LLC,Mortgage,3053,143.36,4.70
+317,"DOVENMUEHLE MORTGAGE, INC.",Mortgage,2226,104.10,4.68
+318,BLACKHAWK NETWORK HOLDINGS INC.,Prepaid card,1277,58.24,4.56
+319,EDFINANCIAL SERVICES,Student loan,6382,287.96,4.51
+320,WELLS FARGO & COMPANY,Checking or savings account,63012,2837.21,4.50
+321,"WEBSTER BANK, NATIONAL ASSOCIATION",Checking or savings account,1279,57.09,4.46
+322,"UNITED SHORE FINANCIAL SERVICES, LLC",Mortgage,2067,88.56,4.28
+323,CAPITAL ONE FINANCIAL CORPORATION,Credit card,70941,3010.61,4.24
+324,PENTAGON FEDERAL CREDIT UNION,Credit card,1170,49.40,4.22
+325,"FIRST CITIZENS BANCSHARES, INC.",Checking or savings account,1057,43.78,4.14
+326,NEW YORK COMMUNITY BANCORP INC,Mortgage,1115,46.07,4.13
+327,"ROCKET MORTGAGE, LLC",Mortgage,8351,344.70,4.13
+328,"SHELLPOINT PARTNERS, LLC",Mortgage,16957,699.57,4.13
+329,CAPITAL ONE FINANCIAL CORPORATION,"Money transfer, virtual currency, or money service",1636,66.72,4.08
+330,DISCOVER BANK,Credit card,19371,787.80,4.07
+331,SYNCHRONY FINANCIAL,Credit reporting or other personal consumer reports,20469,794.36,3.88
+332,TOYOTA MOTOR CREDIT CORPORATION,Vehicle loan or lease,3728,144.35,3.87
+333,"MAXIMUS FEDERAL SERVICES, INC.",Student loan,8062,296.78,3.68
+334,AES/PHEAA,Credit reporting or other personal consumer reports,2488,87.90,3.53
+335,"CIT BANK, NATIONAL ASSOCIATION",Mortgage,1747,60.97,3.49
+336,JPMORGAN CHASE & CO.,Checking or savings account,59117,1965.68,3.33
+337,JPMORGAN CHASE & CO.,Consumer Loan,1028,32.10,3.12
+338,WORLD ACCEPTANCE CORPORATION,Debt collection,2048,62.90,3.07
+339,CAPITAL ONE FINANCIAL CORPORATION,Debt collection,18324,562.02,3.07
+340,"EARLY WARNING SERVICES, LLC","Money transfer, virtual currency, or money service",22559,685.71,3.04
+341,"CONTINENTAL SERVICES GROUP, INC. D/B/A CONSERVE",Debt collection,1480,41.99,2.84
+342,ALLY FINANCIAL INC.,Vehicle loan or lease,7730,213.84,2.77
+343,SANTANDER CONSUMER USA HOLDINGS INC.,Vehicle loan or lease,4238,116.14,2.74
+344,BANK OF THE WEST,Checking or savings account,1363,37.09,2.72
+345,CAPITAL ONE FINANCIAL CORPORATION,Consumer Loan,1211,27.28,2.25
+346,WELLS FARGO & COMPANY,"Money transfer, virtual currency, or money service",8148,182.62,2.24
+347,NAVY FEDERAL CREDIT UNION,Checking or savings account,21696,416.32,1.92
+348,PNC BANK N.A.,Mortgage,7482,135.28,1.81
+349,"AMERIHOME MORTGAGE COMPANY, LLC",Mortgage,1871,33.12,1.77
+350,CREDIT ACCEPTANCE CORPORATION,Vehicle loan or lease,5661,99.88,1.76
+351,"PORTFOLIO RECOVERY ASSOCIATES, LLC",Credit reporting or other personal consumer reports,12979,222.57,1.71
+352,TRANSFERWISE LTD,"Money transfer, virtual currency, or money service",1707,28.28,1.66
+353,SYNCHRONY FINANCIAL,Checking or savings account,2220,33.42,1.51
+354,WELLS FARGO & COMPANY,Credit reporting or other personal consumer reports,17811,259.24,1.46
+355,DITECH FINANCIAL LLC,Mortgage,13621,167.16,1.23
+356,AMERICAN HONDA FINANCE CORP,Vehicle loan or lease,2192,21.53,0.98
+357,JPMORGAN CHASE & CO.,Mortgage,25867,209.29,0.81
+358,"CALIBER HOME LOANS, INC.",Mortgage,4316,26.66,0.62
+359,"BREAD FINANCIAL HOLDINGS, INC.",Credit reporting or other personal consumer reports,16174,84.92,0.53
+360,"LD HOLDINGS GROUP, LLC",Mortgage,2555,13.35,0.52
+361,U.S. BANCORP,Checking or savings account,15952,82.93,0.52
+362,"CITIZENS FINANCIAL GROUP, INC.",Mortgage,3774,16.67,0.44
+363,ALLY FINANCIAL INC.,Consumer Loan,2093,7.30,0.35
+364,WELLS FARGO & COMPANY,Mortgage,49897,18.63,0.04
+365,WELLS FARGO & COMPANY,Credit card,19428,5.41,0.03
+366,MONEYGRAM PAYMENT SYSTEMS WORLDWIDE INC,"Money transfer, virtual currency, or money service",3289,-7.54,-0.23
+367,"SUNTRUST BANKS, INC.",Checking or savings account,4369,-16.60,-0.38
+368,TRUIST FINANCIAL CORPORATION,Vehicle loan or lease,1699,-7.90,-0.47
+369,BBVA FINANCIAL CORPORATION,Checking or savings account,3280,-17.77,-0.54
+370,UNITED SERVICES AUTOMOBILE ASSOCIATION,Debt collection,1328,-9.26,-0.70
+371,RESURGENT CAPITAL SERVICES L.P.,Debt collection,54730,-473.60,-0.87
+372,GOLDMAN SACHS BANK USA,Credit card,10439,-155.69,-1.49
+373,ONEMAIN FINANCE CORPORATION,"Payday loan, title loan, personal loan, or advance loan",3256,-61.67,-1.89
+374,WELLS FARGO & COMPANY,Student loan,1944,-37.59,-1.93
+375,SYNCHRONY FINANCIAL,Credit card,45370,-927.02,-2.04
+376,KLARNA AB,"Payday loan, title loan, personal loan, or advance loan",1024,-22.23,-2.17
+377,"GENERAL MOTORS FINANCIAL COMPANY, INC.",Vehicle loan or lease,3126,-72.81,-2.33
+378,SYNCHRONY FINANCIAL,Debt collection,13316,-367.86,-2.76
+379,M&T BANK CORPORATION,Checking or savings account,3791,-116.57,-3.07
+380,ENCORE CAPITAL GROUP INC.,Credit card,1099,-34.26,-3.12
+381,"CITIBANK, N.A.","Money transfer, virtual currency, or money service",2281,-72.93,-3.20
+382,"HW HOLDING, INC",Debt collection,7813,-262.04,-3.35
+383,"CAVALRY INVESTMENTS, LLC",Debt collection,5068,-177.03,-3.49
+384,CAPITAL ONE FINANCIAL CORPORATION,Mortgage,1246,-52.24,-4.19
+385,MOHELA,Student loan,18801,-819.38,-4.36
+386,"CITIBANK, N.A.",Mortgage,10360,-460.77,-4.45
+387,U.S. BANCORP,"Money transfer, virtual currency, or money service",1125,-51.08,-4.54
+388,"COINBASE, INC.","Money transfer, virtual currency, or money service",9257,-462.76,-5.00
+389,DISCOVER BANK,Checking or savings account,2616,-135.86,-5.19
+390,WELLS FARGO & COMPANY,Vehicle loan or lease,4916,-281.65,-5.73
+391,"I.Q. DATA INTERNATIONAL, INC.",Debt collection,1572,-90.38,-5.75
+392,"CITIBANK, N.A.",Credit reporting or other personal consumer reports,22343,-1399.01,-6.26
+393,"PAYPAL HOLDINGS, INC",Credit card,2549,-161.05,-6.32
+394,REGIONS FINANCIAL CORPORATION,Checking or savings account,6044,-392.90,-6.50
+395,"CITIZENS FINANCIAL GROUP, INC.",Checking or savings account,8900,-581.17,-6.53
+396,PHH MORTGAGE SERVICES CORPORATION,Mortgage,2362,-156.12,-6.61
+397,PENTAGON FEDERAL CREDIT UNION,Checking or savings account,1298,-89.41,-6.89
+398,KEYCORP,Checking or savings account,4495,-311.70,-6.93
+399,TD BANK US HOLDING COMPANY,Debt collection,3427,-241.46,-7.05
+400,TCF NATIONAL BANK,Checking or savings account,1622,-115.89,-7.15
+401,NAVY FEDERAL CREDIT UNION,"Money transfer, virtual currency, or money service",1111,-80.96,-7.29
+402,T.S. HOLDINGS,Debt collection,6213,-453.64,-7.30
+403,M&T BANK CORPORATION,Mortgage,4388,-329.78,-7.52
+404,"ONLINE INFORMATION SERVICES, INC.",Debt collection,3349,-253.59,-7.57
+405,"HARRIS & HARRIS, LTD.",Debt collection,5048,-382.54,-7.58
+406,"BANK OF AMERICA, NATIONAL ASSOCIATION",Credit card,36707,-2937.12,-8.00
+407,BMO BANK NATIONAL ASSOCIATION,Checking or savings account,4009,-330.65,-8.25
+408,"PENNYMAC LOAN SERVICES, LLC.",Mortgage,5458,-462.57,-8.48
+409,CL HOLDINGS LLC,Debt collection,47177,-4048.19,-8.58
+410,CROSSCOUNTRY MORTGAGE LLC,Mortgage,1418,-122.41,-8.63
+411,SLM CORPORATION,Student loan,4199,-366.25,-8.72
+412,WELLS FARGO & COMPANY,Consumer Loan,2523,-223.19,-8.85
+413,JPMORGAN CHASE & CO.,Vehicle loan or lease,2702,-244.29,-9.04
+414,DISCOVER BANK,Student loan,1610,-148.14,-9.20
+415,"TRIDENT ASSET MANAGEMENT, L.L.C.",Debt collection,1103,-108.73,-9.86
+416,TD BANK US HOLDING COMPANY,Credit card,8835,-875.77,-9.91
+417,"BANK OF AMERICA, NATIONAL ASSOCIATION","Money transfer, virtual currency, or money service",7901,-804.19,-10.18
+418,AMERICAN EXPRESS COMPANY,Checking or savings account,2575,-262.88,-10.21
+419,"BANK OF AMERICA, NATIONAL ASSOCIATION",Vehicle loan or lease,1330,-136.48,-10.26
+420,FIFTH THIRD FINANCIAL CORPORATION,Mortgage,3500,-361.05,-10.32
+421,NAVY FEDERAL CREDIT UNION,Vehicle loan or lease,1876,-195.17,-10.40
+422,U.S. BANCORP,Credit card,11326,-1194.66,-10.55
+423,RADIUS GLOBAL SOLUTIONS LLC,Credit reporting or other personal consumer reports,1461,-156.25,-10.69
+424,TRUIST FINANCIAL CORPORATION,Mortgage,2996,-326.15,-10.89
+425,WELLS FARGO & COMPANY,Debt collection,8159,-898.41,-11.01
+426,FORD MOTOR CREDIT CO.,Vehicle loan or lease,1196,-132.97,-11.12
+427,KEYCORP,Mortgage,1028,-115.89,-11.27
+428,"BANK OF AMERICA, NATIONAL ASSOCIATION",Mortgage,48427,-5483.35,-11.32
+429,NAVY FEDERAL CREDIT UNION,Mortgage,2260,-258.52,-11.44
+430,"BANK OF AMERICA, NATIONAL ASSOCIATION",Prepaid card,4245,-488.09,-11.50
+431,"EQUIFAX, INC.",Credit reporting or other personal consumer reports,4997819,-575706.08,-11.52
+432,"CITIBANK, N.A.",Credit card,69548,-8065.44,-11.60
+433,"CONN'S, INC.",Debt collection,1146,-134.21,-11.71
+434,ATLANTICUS SERVICES CORPORATION,Credit card,2923,-344.50,-11.79
+435,ENCORE CAPITAL GROUP INC.,Debt collection,56885,-7373.33,-12.96
+436,COMERICA,Checking or savings account,2732,-365.41,-13.38
+437,ALLY FINANCIAL INC.,Checking or savings account,5469,-734.81,-13.44
+438,"SANTANDER HOLDINGS USA, INC.",Debt collection,2638,-357.58,-13.55
+439,U.S. BANCORP,Debt collection,2006,-280.31,-13.97
+440,TD BANK US HOLDING COMPANY,"Money transfer, virtual currency, or money service",1062,-148.92,-14.02
+441,"SUNTRUST BANKS, INC.",Mortgage,3710,-526.41,-14.19
+442,"HUNTINGTON NATIONAL BANK, THE",Mortgage,1149,-164.46,-14.31
+443,"CITIBANK, N.A.",Checking or savings account,25514,-3667.98,-14.38
+444,MIDFIRST BANK,Mortgage,1448,-215.68,-14.90
+445,"CREDIT KARMA, LLC",Checking or savings account,1641,-246.49,-15.02
+446,DISCOVER BANK,Debt collection,5382,-845.72,-15.71
+447,"CBC COMPANIES, INC.",Credit reporting or other personal consumer reports,60536,-9576.72,-15.82
+448,ERC,Debt collection,10561,-1687.48,-15.98
+449,AMERICAN EXPRESS COMPANY,Debt collection,5635,-905.79,-16.07
+450,WELLS FARGO & COMPANY,"Payday loan, title loan, personal loan, or advance loan",1331,-222.74,-16.74
+451,"PAYPAL HOLDINGS, INC",Checking or savings account,5409,-906.87,-16.77
+452,U.S. BANCORP,Prepaid card,4081,-684.79,-16.78
+453,"SOUTHWEST CREDIT SYSTEMS, L.P.",Credit reporting or other personal consumer reports,1617,-273.68,-16.93
+454,U.S. BANCORP,Mortgage,9148,-1574.95,-17.22
+455,AES/PHEAA,Student loan,13040,-2253.95,-17.28
+456,"W&A INTERMEDIATE CO., LLC",Debt collection,3023,-526.35,-17.41
+457,"EQUIFAX, INC.",Credit card,20637,-3639.03,-17.63
+458,AMERISAVE MORTGAGE CORPORATION,Mortgage,1611,-289.04,-17.94
+459,"CITIBANK, N.A.",Debt collection,12707,-2280.78,-17.95
+460,TD BANK US HOLDING COMPANY,Checking or savings account,12355,-2231.79,-18.06
+461,"HUNTINGTON NATIONAL BANK, THE",Checking or savings account,5506,-1001.55,-18.19
+462,"ORG GC GP BUYER, LLC",Debt collection,1039,-189.78,-18.27
+463,"PAYPAL HOLDINGS, INC",Prepaid card,1072,-199.01,-18.56
+464,VW CREDIT,Vehicle loan or lease,1104,-206.39,-18.69
+465,"BANK OF AMERICA, NATIONAL ASSOCIATION",Checking or savings account,60708,-11434.74,-18.84
+466,"DIVERSIFIED CONSULTANTS, INC.",Debt collection,4498,-888.37,-19.75
+467,SYNCHRONY FINANCIAL,"Payday loan, title loan, personal loan, or advance loan",1270,-252.67,-19.90
+468,"BREAD FINANCIAL HOLDINGS, INC.",Credit card,21498,-4312.96,-20.06
+469,NAVY FEDERAL CREDIT UNION,Debt collection,4585,-949.40,-20.71
+470,REGIONS FINANCIAL CORPORATION,Mortgage,1183,-250.37,-21.16
+471,"EQUIFAX, INC.",Debt collection,56785,-12036.21,-21.20
+472,TD BANK US HOLDING COMPANY,Vehicle loan or lease,1187,-254.87,-21.47
+473,"SANTANDER HOLDINGS USA, INC.",Vehicle loan or lease,5907,-1268.67,-21.48
+474,U.S. BANCORP,Credit reporting or other personal consumer reports,5446,-1215.47,-22.32
+475,GOLDMAN SACHS BANK USA,Debt collection,1953,-443.90,-22.73
+476,"ALLIANCE ONE, INC.",Debt collection,1030,-241.25,-23.42
+477,"BREAD FINANCIAL HOLDINGS, INC.",Debt collection,11096,-2636.30,-23.76
+478,"SOUTHWEST CREDIT SYSTEMS, L.P.",Debt collection,6666,-1584.27,-23.77
+479,TD BANK US HOLDING COMPANY,Mortgage,1821,-433.03,-23.78
+480,"PAYPAL HOLDINGS, INC","Money transfer, virtual currency, or money service",32470,-8191.45,-25.23
+481,"PORTFOLIO RECOVERY ASSOCIATES, LLC",Debt collection,54123,-13722.18,-25.35
+482,RADIUS GLOBAL SOLUTIONS LLC,Debt collection,7668,-2018.13,-26.32
+483,"SPRING OAKS CAPITAL, LLC",Debt collection,8959,-2418.17,-26.99
+484,"TRANSUNION INTERMEDIATE HOLDINGS, INC.",Credit reporting or other personal consumer reports,5045937,-1375104.18,-27.25
+485,COMERICA,Prepaid card,5017,-1374.15,-27.39
+486,"THE CBE GROUP, INC.",Debt collection,4268,-1202.15,-28.17
+487,AMERICAN EXPRESS COMPANY,Prepaid card,7093,-2247.68,-31.69
+488,"SEQUIUM ASSET SOLUTIONS, LLC",Debt collection,4383,-1688.58,-38.53
+489,"PAYPAL HOLDINGS, INC",Debt collection,1713,-689.50,-40.25
+490,"TRANSUNION INTERMEDIATE HOLDINGS, INC.",Debt collection,57675,-26295.11,-45.59
+491,"DYNAMIC RECOVERY SOLUTIONS, LLC",Debt collection,1693,-803.60,-47.47
+492,"MRS BPO, LLC",Debt collection,2629,-1271.66,-48.37
+493,IQOR US INC,Debt collection,1753,-917.72,-52.35
+494,"THE CMI GROUP, INC.",Debt collection,2557,-1344.48,-52.58
+495,"TRANSUNION INTERMEDIATE HOLDINGS, INC.",Credit card,19502,-10522.44,-53.96
+496,"KRIYA CAPITAL, LLC",Credit reporting or other personal consumer reports,3413,-1992.20,-58.37
+497,"KRIYA CAPITAL, LLC",Debt collection,15716,-11307.58,-71.95
+498,"CAPIO PARTNERS, LLC",Debt collection,3333,-2689.53,-80.69

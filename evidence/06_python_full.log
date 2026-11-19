@@ -1,0 +1,17 @@
+ Container bigdata-final-job-run-6af6e114758f Creating 
+ Container bigdata-final-job-run-6af6e114758f Created 
+{
+  "tag": "full",
+  "seconds": 51.5,
+  "dropped": {
+    "D1": 685995,
+    "D2": 6
+  },
+  "kept": 18517797,
+  "stage1_keys": 745726,
+  "stage2_keys": 18622,
+  "stage4_keys": 20232,
+  "dropped_cells": 1407,
+  "pairs_ranked": 498,
+  "comparison_with_spark": "Spark і Python збігаються: 498 пар, відхилення однакові до 0,01 п.п."
+}

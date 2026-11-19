@@ -1,0 +1,19 @@
+ Container bigdata-final-job-run-680876aeb9d0 Creating 
+ Container bigdata-final-job-run-680876aeb9d0 Created 
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/11/19 21:48:09 INFO SparkContext: Running Spark version 4.2.0
+26/11/19 21:48:09 INFO SparkContext: OS info Linux, 6.12.76-linuxkit, aarch64
+26/11/19 21:48:09 INFO SparkContext: Java version 21.0.11+10-LTS
+26/11/19 21:48:09 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting Spark log level to "WARN".
+26/11/19 21:48:12 WARN CSVHeaderChecker: CSV header does not conform to the schema.
+ Header: Date received, Product, Sub-product, Issue, Company, Company response to consumer
+ Schema: date_received, product, sub_product, issue, company, company_response
+Expected: date_received but found: Date received
+CSV file: file:///work/data/sample.csv
+
+sample: 2,548 пар, у рейтингу 3, дія 2.8 с
+ 1. +37.72 п.п.  n=   21,210  EXPERIAN INFORMATION SOLUTIONS INC. | Credit reporting or other personal consumer reports
+ 2. -11.97 п.п.  n=   24,939  EQUIFAX, INC. | Credit reporting or other personal consumer reports
+ 3. -26.68 п.п.  n=   25,014  TRANSUNION INTERMEDIATE HOLDINGS, INC. | Credit reporting or other personal consumer reports

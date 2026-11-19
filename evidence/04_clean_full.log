@@ -1,0 +1,46 @@
+ Container bigdata-final-job-run-c4d786406b18 Creating 
+ Container bigdata-final-job-run-c4d786406b18 Created 
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/11/19 21:12:43 INFO SparkContext: Running Spark version 4.2.0
+26/11/19 21:12:43 INFO SparkContext: OS info Linux, 6.12.76-linuxkit, aarch64
+26/11/19 21:12:43 INFO SparkContext: Java version 21.0.11+10-LTS
+26/11/19 21:12:43 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting Spark log level to "WARN".
+26/11/19 21:12:47 WARN CSVHeaderChecker: CSV header does not conform to the schema.
+ Header: Date received, Product, Sub-product, Issue, Company, Company response to consumer
+ Schema: date_received, product, sub_product, issue, company, company_response
+Expected: date_received but found: Date received
+CSV file: file:///data/complaints.csv
+26/11/19 21:13:04 WARN CSVHeaderChecker: CSV header does not conform to the schema.
+ Header: Company response to consumer
+ Schema: company_response
+Expected: company_response but found: Company response to consumer
+CSV file: file:///data/complaints.csv
+26/11/19 21:13:17 WARN CSVHeaderChecker: CSV header does not conform to the schema.
+ Header: Date received, Product, Sub-product, Issue, Company, Company response to consumer, Complaint ID
+ Schema: date_received, product, sub_product, issue, company, company_response, complaint_id
+Expected: date_received but found: Date received
+CSV file: file:///data/complaints.csv
+26/11/19 21:13:30 WARN CSVHeaderChecker: CSV header does not conform to the schema.
+ Header: Date received, Product, Sub-product, Issue, Company, Company response to consumer, Complaint ID
+ Schema: date_received, product, sub_product, issue, company, company_response, complaint_id
+Expected: date_received but found: Date received
+CSV file: file:///data/complaints.csv
+26/11/19 21:13:30 WARN CSVHeaderChecker: CSV header does not conform to the schema.
+ Header: Date received, Product, Sub-product, Issue, Company, Company response to consumer, Complaint ID
+ Schema: date_received, product, sub_product, issue, company, company_response, complaint_id
+Expected: date_received but found: Date received
+CSV file: file:///data/complaints.csv
+# Чистка (full): 19,203,798 рядків на вході, 18,517,797 лишилось (96.43%)
+
+| Правило | Що робить | Рядків |
+|---|---|---|
+| D1 | відкинуто: company_response не закрита (In progress, Untimely response, порожнє) | 685,995 |
+| D2 | відкинуто: порожні company / product / issue | 6 |
+| D3 | відкинуто: date_received не у форматі yyyy-MM-dd | 0 |
+| F1 | виправлено: пробіли на краях company / product / issue | 0 |
+| F2 | виправлено: регістр назви компанії (upper) | 7,736 -> 7,729 різних компаній |
+| F3 | виправлено: стара назва продукту -> чинна | 2,636,220 |
+
+company_response: Closed with explanation=11,862,075, Closed with non-monetary relief=6,389,281, In progress=649,654, Closed with monetary relief=225,665, Untimely response=36,320, Closed without relief=17,867, Closed=17,611, Closed with relief=5,304, <empty>=21
